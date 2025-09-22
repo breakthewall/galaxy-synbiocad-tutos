@@ -41,7 +41,7 @@ markdown_extensions:
 nav:
   - Home: index.md
   - Tutorials:
-    - Retrosynthesis (example): tuto-1.md
-    - Pathway Design (example): tuto-2.md
-    - Analysis & Visualization (example): tuto-3.md
+    # - Retrosynthesis (example): tuto-1.md
+    # - Pathway Design (example): tuto-2.md
+    # - Analysis & Visualization (example): tuto-3.md
   - About: about.md
