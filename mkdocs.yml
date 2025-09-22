@@ -1,0 +1,47 @@
+site_name: Galaxy-SynBioCAD • Tutorials
+site_description: Getting started tutorials for Galaxy-SynBioCAD tools
+# Replace the URL below after publishing to GitHub Pages
+site_url: https://<your-user>.github.io/<your-repo>/
+repo_url: https://github.com/<your-user>/<your-repo>
+edit_uri: edit/main/docs/
+
+theme:
+  name: material
+  language: en
+  features:
+    - navigation.instant
+    - navigation.sections
+    - navigation.top
+    - search.suggest
+    - search.highlight
+    - content.code.copy
+    - content.tabs.link
+  palette:
+    - scheme: default
+      primary: indigo
+      accent: indigo
+    - scheme: slate
+      primary: indigo
+      accent: indigo
+
+plugins:
+  - search
+
+markdown_extensions:
+  - admonition
+  - toc:
+      permalink: true
+  - pymdownx.details
+  - pymdownx.superfences
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight
+  - attr_list
+
+nav:
+  - Home: index.md
+  - Tutorials:
+    - Retrosynthesis (example): tuto-1.md
+    - Pathway Design (example): tuto-2.md
+    - Analysis & Visualization (example): tuto-3.md
+  - About: about.md
