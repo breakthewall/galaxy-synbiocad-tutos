@@ -30,10 +30,8 @@ Lastly, the metabolic network is then deconstructed into individual pathways usi
 
 Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.
 
-!!! info "Table of Contents"
-    In this tutorial we will cover the following sections:
-
-    [TOC]
+!!! tip "Navigation"
+    Use the right sidebar to navigate through the tutorial.
 
 ## Data Preparation
 
@@ -43,12 +41,12 @@ RetroSynthesis workflow will be run with the following inputs:
   2. Chemical structure of metabolites available in the chosen chassis (E. coli),
   3. Reaction rules modeling possible metabolic transformations.
 
-!!! info "Target compound"
-    In the course of this tutorial, we'll use Xylitol as target compound and will aim to produce it in an Escherichia Coli strain. To model the metabolism of this strain, we will use the ecoli core model available in the BiGG database ({% cite King2016 %}).
+!!! info "Targeted compound and chassis"
+    In the course of this tutorial, we'll focus on the production of **xylitol** in an Escherichia Coli strain. To model the metabolism of this strain, we will use the *E. coli* core model available in the BiGG database ({% cite King2016 %}).
 
 The data used are pretty straight forward to obtain. Firstly, we download an SBML model, then we select all sinks to use into the RetroPath2.0 software from this model. Lastly, we request from RetroRules all possible reactions to find a chemical reaction cascade that produces the target.
 
-## Download a model
+#### Metabolic model
 
 !!! example "Hands-on: Select a model"
 
@@ -61,7 +59,7 @@ The data used are pretty straight forward to obtain. Firstly, we download an SBM
 ??? question "Q2: What is the file format of the model?"
       The model is in SBML format, which is based on XML.
 
-## Prepare a sink file from the SBML model
+### Sink compounds
 
 !!! example "Hands-on: Create a sink file"
 
@@ -82,7 +80,7 @@ The data used are pretty straight forward to obtain. Firstly, we download an SBM
 
 ??? question "Q3: How many compounds are listed in the file?"
 
-## Prepare reaction rules
+### Reaction rules
 
 !!! example "Hands-on: Download reaction rules"
 
@@ -103,7 +101,9 @@ The data used are pretty straight forward to obtain. Firstly, we download an SBM
 ??? question "Q4: How many rows are in the file?"
       More than 200 thousands!
 
-## Run the Retrosynthesis algorithm using **RetroPath2.0**
+## Retrosynthesis
+
+### Run the Retrosynthesis algorithm using **RetroPath2.0**
 
 RetroPath2.0 is an open-source tool for building retrosynthesis networks by combining reaction rules and a retrosynthesis-based algorithm to link the desired target compound to a set of available precursors. RetroPath2.0 core code is available at [myExperiment](https://www.myexperiment.org/workflows/4987.html).
 
@@ -132,7 +132,7 @@ The retrosynthesis network is outputted as a CSV file listing predicted reaction
 ??? question "Q3: How many reaction steps from source have been predicted?"
       In this example, we limited the maximal pathway length to 3 steps.
 
-## Enumerate pathways with **RP2paths**
+### Enumerate pathways with **RP2paths**
 
 The RetroPath2.0 algorithm produces a reaction network, exploring reachable compounds and reactions starting from the target compound. However, no consideration are made regarding the splitting of this network into individual pathways.
 
@@ -155,7 +155,8 @@ Here, we will investigate how to split the network into individual pathways. A v
 ??? question "Q4: How many pathways are found?"
     150.
 
-## Refine reactions
+
+### Refine reactions
 
 Reaction rules are often very generic, meaning that one rule can correspond to several template reactions. In addition, some compounds are excluded from the rules: on the left side, because only one substrate is considered at a time, and on the right side, because some compounds are by purpose omitted (mostly cofactors). Here the aim is to put back excluded cofactors and these cofactors in the predicted reactions.
 
