@@ -394,36 +394,52 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#download-a-model" class="md-nav__link">
+    <nav class="md-nav" aria-label="Data Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metabolic-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Download a model
+      Metabolic model
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-a-sink-file-from-the-sbml-model" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sink-compounds" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare a sink file from the SBML model
+      Sink compounds
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-reaction-rules" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reaction-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare reaction rules
+      Reaction rules
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#retrosynthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrosynthesis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrosynthesis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#run-the-retrosynthesis-algorithm-using-retropath20" class="md-nav__link">
     <span class="md-ellipsis">
       Run the Retrosynthesis algorithm using RetroPath2.0
@@ -431,8 +447,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#enumerate-pathways-with-rp2paths" class="md-nav__link">
     <span class="md-ellipsis">
       Enumerate pathways with RP2paths
@@ -440,13 +456,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#refine-reactions" class="md-nav__link">
     <span class="md-ellipsis">
       Refine reactions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -560,36 +581,52 @@
     </span>
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#download-a-model" class="md-nav__link">
+    <nav class="md-nav" aria-label="Data Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#metabolic-model" class="md-nav__link">
     <span class="md-ellipsis">
-      Download a model
+      Metabolic model
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-a-sink-file-from-the-sbml-model" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#sink-compounds" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare a sink file from the SBML model
+      Sink compounds
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#prepare-reaction-rules" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#reaction-rules" class="md-nav__link">
     <span class="md-ellipsis">
-      Prepare reaction rules
+      Reaction rules
     </span>
   </a>
   
 </li>
+        
+      </ul>
+    </nav>
+  
+</li>
       
         <li class="md-nav__item">
+  <a href="#retrosynthesis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Retrosynthesis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Retrosynthesis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#run-the-retrosynthesis-algorithm-using-retropath20" class="md-nav__link">
     <span class="md-ellipsis">
       Run the Retrosynthesis algorithm using RetroPath2.0
@@ -597,8 +634,8 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#enumerate-pathways-with-rp2paths" class="md-nav__link">
     <span class="md-ellipsis">
       Enumerate pathways with RP2paths
@@ -606,13 +643,18 @@
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#refine-reactions" class="md-nav__link">
     <span class="md-ellipsis">
       Refine reactions
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -678,22 +720,9 @@
 </figcaption>
 </figure>
 <p>Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.</p>
-<div class="admonition info">
-<p class="admonition-title">Table of Contents</p>
-<p>In this tutorial we will cover the following sections:</p>
-<div class="toc">
-<ul>
-<li><a href="#data-preparation">Data Preparation</a></li>
-<li><a href="#download-a-model">Download a model</a></li>
-<li><a href="#prepare-a-sink-file-from-the-sbml-model">Prepare a sink file from the SBML model</a></li>
-<li><a href="#prepare-reaction-rules">Prepare reaction rules</a></li>
-<li><a href="#run-the-retrosynthesis-algorithm-using-retropath20">Run the Retrosynthesis algorithm using RetroPath2.0</a></li>
-<li><a href="#enumerate-pathways-with-rp2paths">Enumerate pathways with RP2paths</a></li>
-<li><a href="#refine-reactions">Refine reactions</a></li>
-<li><a href="#conclusion">Conclusion</a></li>
-<li><a href="#license">License</a></li>
-</ul>
-</div>
+<div class="admonition tip">
+<p class="admonition-title">Navigation</p>
+<p>Use the right sidebar to navigate through the tutorial.</p>
 </div>
 <h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
 <p>RetroSynthesis workflow will be run with the following inputs:</p>
@@ -703,11 +732,11 @@
 <li>Reaction rules modeling possible metabolic transformations.</li>
 </ol>
 <div class="admonition info">
-<p class="admonition-title">Target compound</p>
-<p>In the course of this tutorial, we'll use Xylitol as target compound and will aim to produce it in an Escherichia Coli strain. To model the metabolism of this strain, we will use the ecoli core model available in the BiGG database ({% cite King2016 %}).</p>
+<p class="admonition-title">Targeted compound and chassis</p>
+<p>In the course of this tutorial, we'll focus on the production of <strong>xylitol</strong> in an Escherichia Coli strain. To model the metabolism of this strain, we will use the <em>E. coli</em> core model available in the BiGG database ({% cite King2016 %}).</p>
 </div>
 <p>The data used are pretty straight forward to obtain. Firstly, we download an SBML model, then we select all sinks to use into the RetroPath2.0 software from this model. Lastly, we request from RetroRules all possible reactions to find a chemical reaction cascade that produces the target.</p>
-<h2 id="download-a-model">Download a model<a class="headerlink" href="#download-a-model" title="Permanent link">&para;</a></h2>
+<h4 id="metabolic-model">Metabolic model<a class="headerlink" href="#metabolic-model" title="Permanent link">&para;</a></h4>
 <div class="admonition example">
 <p class="admonition-title">Hands-on: Select a model</p>
 <p>Run <strong>Pick SBML Model</strong> (Galaxy Version 0.0.3) with the following parameter:<br />
@@ -721,7 +750,7 @@
 <summary>Q2: What is the file format of the model?</summary>
 <p>The model is in SBML format, which is based on XML.</p>
 </details>
-<h2 id="prepare-a-sink-file-from-the-sbml-model">Prepare a sink file from the SBML model<a class="headerlink" href="#prepare-a-sink-file-from-the-sbml-model" title="Permanent link">&para;</a></h2>
+<h3 id="sink-compounds">Sink compounds<a class="headerlink" href="#sink-compounds" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Hands-on: Create a sink file</p>
 <p>Run <strong>Sink from SBML</strong> (Galaxy Version 5.12.1) with the following parameters:<br />
@@ -744,7 +773,7 @@
 <details class="question">
 <summary>Q3: How many compounds are listed in the file?</summary>
 </details>
-<h2 id="prepare-reaction-rules">Prepare reaction rules<a class="headerlink" href="#prepare-reaction-rules" title="Permanent link">&para;</a></h2>
+<h3 id="reaction-rules">Reaction rules<a class="headerlink" href="#reaction-rules" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Hands-on: Download reaction rules</p>
 <p>Run <strong>RRules Parser</strong> (Galaxy Version 2.6.0+galaxy0) with the following parameters:<br />
@@ -768,7 +797,8 @@
 <summary>Q4: How many rows are in the file?</summary>
 <p>More than 200 thousands!</p>
 </details>
-<h2 id="run-the-retrosynthesis-algorithm-using-retropath20">Run the Retrosynthesis algorithm using <strong>RetroPath2.0</strong><a class="headerlink" href="#run-the-retrosynthesis-algorithm-using-retropath20" title="Permanent link">&para;</a></h2>
+<h2 id="retrosynthesis">Retrosynthesis<a class="headerlink" href="#retrosynthesis" title="Permanent link">&para;</a></h2>
+<h3 id="run-the-retrosynthesis-algorithm-using-retropath20">Run the Retrosynthesis algorithm using <strong>RetroPath2.0</strong><a class="headerlink" href="#run-the-retrosynthesis-algorithm-using-retropath20" title="Permanent link">&para;</a></h3>
 <p>RetroPath2.0 is an open-source tool for building retrosynthesis networks by combining reaction rules and a retrosynthesis-based algorithm to link the desired target compound to a set of available precursors. RetroPath2.0 core code is available at <a href="https://www.myexperiment.org/workflows/4987.html">myExperiment</a>.</p>
 <p>The retrosynthesis network is outputted as a CSV file listing predicted reactions and chemicals (provided as SMILES and InChI) along with other information like a penality score for each reaction.</p>
 <div class="admonition example">
@@ -800,7 +830,7 @@
 <summary>Q3: How many reaction steps from source have been predicted?</summary>
 <p>In this example, we limited the maximal pathway length to 3 steps.</p>
 </details>
-<h2 id="enumerate-pathways-with-rp2paths">Enumerate pathways with <strong>RP2paths</strong><a class="headerlink" href="#enumerate-pathways-with-rp2paths" title="Permanent link">&para;</a></h2>
+<h3 id="enumerate-pathways-with-rp2paths">Enumerate pathways with <strong>RP2paths</strong><a class="headerlink" href="#enumerate-pathways-with-rp2paths" title="Permanent link">&para;</a></h3>
 <p>The RetroPath2.0 algorithm produces a reaction network, exploring reachable compounds and reactions starting from the target compound. However, no consideration are made regarding the splitting of this network into individual pathways.</p>
 <p>Here, we will investigate how to split the network into individual pathways. A valid pathway starting from only available material (sink metabolites) and reaching the target.</p>
 <div class="admonition example">
@@ -824,7 +854,7 @@
 <summary>Q4: How many pathways are found?</summary>
 <p>150.</p>
 </details>
-<h2 id="refine-reactions">Refine reactions<a class="headerlink" href="#refine-reactions" title="Permanent link">&para;</a></h2>
+<h3 id="refine-reactions">Refine reactions<a class="headerlink" href="#refine-reactions" title="Permanent link">&para;</a></h3>
 <p>Reaction rules are often very generic, meaning that one rule can correspond to several template reactions. In addition, some compounds are excluded from the rules: on the left side, because only one substrate is considered at a time, and on the right side, because some compounds are by purpose omitted (mostly cofactors). Here the aim is to put back excluded cofactors and these cofactors in the predicted reactions.</p>
 <div class="admonition example">
 <p class="admonition-title">Hands-on: Refine reactions</p>
