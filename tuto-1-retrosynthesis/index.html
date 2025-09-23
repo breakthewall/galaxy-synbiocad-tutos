@@ -1,0 +1,953 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Getting started tutorials for Galaxy-SynBioCAD tools">
+      
+      
+      
+        <link rel="canonical" href="https://tduigou.github.io/galaxy-synbiocad-tutos/tuto-1-retrosynthesis/">
+      
+      
+        <link rel="prev" href="../tuto-2/">
+      
+      
+        <link rel="next" href="../tuto-3/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Retrosynthesis - Galaxy-SynBioCAD • Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-preparation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Galaxy-SynBioCAD • Tutorials" class="md-header__button md-logo" aria-label="Galaxy-SynBioCAD • Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Galaxy-SynBioCAD • Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Retrosynthesis
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tduigou/galaxy-synbiocad-tutos" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Galaxy-SynBioCAD • Tutorials" class="md-nav__button md-logo" aria-label="Galaxy-SynBioCAD • Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Galaxy-SynBioCAD • Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tduigou/galaxy-synbiocad-tutos" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuto-2/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pathway Design (example)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Retrosynthesis
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retrosynthesis
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download a model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-a-sink-file-from-the-sbml-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare a sink file from the SBML model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-reaction-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare reaction rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-retrosynthesis-algorithm-using-retropath20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Retrosynthesis algorithm using RetroPath2.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerate-pathways-with-rp2paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate pathways with RP2paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refine-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refine reactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuto-3/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Analysis & Visualization (example)
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#download-a-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Download a model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-a-sink-file-from-the-sbml-model" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare a sink file from the SBML model
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#prepare-reaction-rules" class="md-nav__link">
+    <span class="md-ellipsis">
+      Prepare reaction rules
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#run-the-retrosynthesis-algorithm-using-retropath20" class="md-nav__link">
+    <span class="md-ellipsis">
+      Run the Retrosynthesis algorithm using RetroPath2.0
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#enumerate-pathways-with-rp2paths" class="md-nav__link">
+    <span class="md-ellipsis">
+      Enumerate pathways with RP2paths
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#refine-reactions" class="md-nav__link">
+    <span class="md-ellipsis">
+      Refine reactions
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tutorial-retro-biosynthesis">Tutorial — Retro-Biosynthesis<a class="headerlink" href="#tutorial-retro-biosynthesis" title="Permanent link">&para;</a></h1>
+<p>Galaxy-SynBioCAD portal is the first toolshed for synthetic biology, metabolic engineering, and industrial biotechnology<sup id="fnref:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>. It provides tools aimed at finding pathways to synthesize heterologous compounds in chassis organisms (RetroRules<sup id="fnref:duigou2019"><a class="footnote-ref" href="#fn:duigou2019">2</a></sup>, RetroPath2.0<sup id="fnref:delepine2018"><a class="footnote-ref" href="#fn:delepine2018">3</a></sup>, RP2Paths, rpCompletion).</p>
+<p>Retrosynthesis is a concept originally proposed for synthetic chemistry where chemists have to work backwards, starting from a target product to reach precursors that are endogenous to the chassis (host organism).</p>
+<p>Typically, the target compound, also named “source compound” is the compound of interest one wishes to produce, while the precursors are usually compounds that are natively present in a chassis strain.</p>
+<figure>
+<p><img alt="Target from Chassis" src="../assets/chassis_target.png" width="360" /><br />
+</p>
+<figcaption>
+<p>Figure 1 — How target compound could be produced from chassis.</p>
+</figcaption>
+</figure>
+<p>In this tutorial, we want to obtain the reactions producing the lycopene (source) into the iML1515 Escherichia Coli strain (chassis).</p>
+<p>To do that, we will use the following RetroSynthetis Workflow composed of 3 key steps.</p>
+<p>First, we aggregate the metabolites present in the chassis and download reaction rules.</p>
+<p>Then, RetroPath2.0 generates feasible metabolic routes between a collection of chemical species contained within a GEM SBML (Systems Biology Markup Language) file of the selected organism, a target molecule that the user wishes to produce, and reaction rules extracted from RetroRules.</p>
+<p>Lastly, the metabolic network is then deconstructed into individual pathways using RP2paths and rpCompletion takes those individual metabolic pathways to filter them (duplicated pathways are removed), splits them into sub-pathways by adding the appropriate cofactors, and finally converted them to SBML files.</p>
+<p>Lastly, the metabolic network is then deconstructed into individual pathways using RP2paths and rpCompletion takes those individual metabolic pathways to filter them (duplicated pathways are removed), splits them into sub-pathways by adding the appropriate cofactors, and finally converted them to SBML files.</p>
+<figure>
+<p><img alt="Retrosynthesis Workflow" src="../assets/retrosynthesis_workflow.png" width="720" /><br />
+</p>
+<figcaption>
+<p>Figure 2 — The <em>Retrosynthesis</em> Workflow.</p>
+</figcaption>
+</figure>
+<p>Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.</p>
+<div class="admonition info">
+<p class="admonition-title">Table of Contents</p>
+<p>In this tutorial we will cover the following sections:</p>
+<div class="toc">
+<ul>
+<li><a href="#data-preparation">Data Preparation</a></li>
+<li><a href="#download-a-model">Download a model</a></li>
+<li><a href="#prepare-a-sink-file-from-the-sbml-model">Prepare a sink file from the SBML model</a></li>
+<li><a href="#prepare-reaction-rules">Prepare reaction rules</a></li>
+<li><a href="#run-the-retrosynthesis-algorithm-using-retropath20">Run the Retrosynthesis algorithm using RetroPath2.0</a></li>
+<li><a href="#enumerate-pathways-with-rp2paths">Enumerate pathways with RP2paths</a></li>
+<li><a href="#refine-reactions">Refine reactions</a></li>
+<li><a href="#conclusion">Conclusion</a></li>
+<li><a href="#license">License</a></li>
+</ul>
+</div>
+</div>
+<h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
+<p>RetroSynthesis workflow will be run with the following inputs:</p>
+<ol>
+<li>Chemical structure of the compound to produce, given by its InChI,</li>
+<li>Chemical structure of metabolites available in the chosen chassis (E. coli),</li>
+<li>Reaction rules modeling possible metabolic transformations.</li>
+</ol>
+<div class="admonition info">
+<p class="admonition-title">Target compound</p>
+<p>In the course of this tutorial, we'll use Xylitol as target compound and will aim to produce it in an Escherichia Coli strain. To model the metabolism of this strain, we will use the ecoli core model available in the BiGG database ({% cite King2016 %}).</p>
+</div>
+<p>The data used are pretty straight forward to obtain. Firstly, we download an SBML model, then we select all sinks to use into the RetroPath2.0 software from this model. Lastly, we request from RetroRules all possible reactions to find a chemical reaction cascade that produces the target.</p>
+<h2 id="download-a-model">Download a model<a class="headerlink" href="#download-a-model" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Select a model</p>
+<p>Run <strong>Pick SBML Model</strong> (Galaxy Version 0.0.3) with the following parameter:<br />
+    - <strong>Strain</strong>: <code>Escherichia coli str. K-12 substr. MG1655 (iML1515)</code></p>
+</div>
+<details class="question">
+<summary>Q1: What does this tool do? Where the models come from?</summary>
+<p>The selected SBML model is downloaded from the BiGG database and stored in your history.</p>
+</details>
+<details class="question">
+<summary>Q2: What is the file format of the model?</summary>
+<p>The model is in SBML format, which is based on XML.</p>
+</details>
+<h2 id="prepare-a-sink-file-from-the-sbml-model">Prepare a sink file from the SBML model<a class="headerlink" href="#prepare-a-sink-file-from-the-sbml-model" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Create a sink file</p>
+<p>Run <strong>Sink from SBML</strong> (Galaxy Version 5.12.1) with the following parameters:<br />
+    - <strong>Strain</strong>: <code>sbml_model</code> (output of <strong>Pick SBML Model</strong>)<br />
+    - <strong>SBML compartment ID</strong>: <code>c</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note: Compartment ID</p>
+<p>The compartment ID must correspond to the one used in the SBML model. Here, <code>c</code> is the BiGG code for the cytoplasm. Other common compartment IDs are <code>e</code> for extracellular and <code>p</code> for periplasm. If you are unsure, you can open the SBML file with a text editor and search for <code>compartment id=</code>.</p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span> If one wishes to use an SBML model from another source, then this value must be changed accordingly.</p>
+</div>
+<details class="question">
+<summary>Q1: What does this tool do?</summary>
+<p>This tool extracts all metabolites present in the SBML model and creates a sink file (CSV format) that can be used as input for RetroPath2.0.</p>
+</details>
+<details class="question">
+<summary>Q2: How many columns are in the file?</summary>
+<p>Click on the eye icon, you should see 2 columns: "Name" and "InChi".</p>
+</details>
+<details class="question">
+<summary>Q3: How many compounds are listed in the file?</summary>
+</details>
+<h2 id="prepare-reaction-rules">Prepare reaction rules<a class="headerlink" href="#prepare-reaction-rules" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Download reaction rules</p>
+<p>Run <strong>RRules Parser</strong> (Galaxy Version 2.6.0+galaxy0) with the following parameters:<br />
+    - <strong>Rule Type</strong>: <code>retro</code><br />
+    - <strong>Select the diameters of the reactions rules</strong>: <code>8</code>, <code>12</code><br />
+    - <strong>Compress output</strong>: <code>no</code></p>
+</div>
+<details class="question">
+<summary>Q1: What is a reaction rule?</summary>
+<p>A reaction rule is a generalized representation of a chemical reaction that can be applied to different substrates. It describes the transformation of a specific functional group or substructure within a molecule, allowing for the prediction of possible reactions that can occur with similar compounds.</p>
+</details>
+<details class="question">
+<summary>Q2: What is a diameter in this context?</summary>
+<p>The diameter of a reaction rule defines the size of the molecular environment around the reaction center that is considered when applying the rule. It determines how specific or general the rule is, with larger diameters capturing more of the surrounding structure and thus being more specific.</p>
+</details>
+<details class="question">
+<summary>Q3: Does a low diameter select specific rules?</summary>
+<p>No, a low diameter selects more generic rules.</p>
+</details>
+<details class="question">
+<summary>Q4: How many rows are in the file?</summary>
+<p>More than 200 thousands!</p>
+</details>
+<h2 id="run-the-retrosynthesis-algorithm-using-retropath20">Run the Retrosynthesis algorithm using <strong>RetroPath2.0</strong><a class="headerlink" href="#run-the-retrosynthesis-algorithm-using-retropath20" title="Permanent link">&para;</a></h2>
+<p>RetroPath2.0 is an open-source tool for building retrosynthesis networks by combining reaction rules and a retrosynthesis-based algorithm to link the desired target compound to a set of available precursors. RetroPath2.0 core code is available at <a href="https://www.myexperiment.org/workflows/4987.html">myExperiment</a>.</p>
+<p>The retrosynthesis network is outputted as a CSV file listing predicted reactions and chemicals (provided as SMILES and InChI) along with other information like a penality score for each reaction.</p>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Build a reaction network</p>
+<p>Run <strong>RetroPath2.0</strong> (Galaxy Version 2.3.0+galaxy0) with the following parameters:<br />
+    - <strong>Rules File</strong>: <code>out_rules</code> (output of <strong>RRules Parser</strong>)<br />
+    - <strong>Sink File</strong>: <code>sink</code> (output of <strong>Sink from SBML</strong>)<br />
+    - <strong>InChI type</strong>: <code>By string</code><br />
+    - <strong>Source InChI</strong>: <code>InChI=1S/C5H12O5/c6-1-3(8)5(10)4(9)2-7/h3-10H,1-2H2/t3-,4+,5+</code><br />
+    - <strong>Maximal Pathway length</strong>: <code>3</code></p>
+</div>
+<div class="admonition info">
+<p class="admonition-title">Note: Execution time</p>
+<p>Depending on the number of rules and the target compound, the execution time may vary from a few minutes to several hours.</p>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">InChI format</p>
+<p>Be careful, you must have <code>InChI=</code> in front of your InChI key.</p>
+</div>
+<details class="question">
+<summary>Q1: What is the format of the output file?</summary>
+<p>A CSV file.</p>
+</details>
+<details class="question">
+<summary>Q2: How many reactions are predicted?</summary>
+<p>More than 10.</p>
+</details>
+<details class="question">
+<summary>Q3: How many reaction steps from source have been predicted?</summary>
+<p>In this example, we limited the maximal pathway length to 3 steps.</p>
+</details>
+<h2 id="enumerate-pathways-with-rp2paths">Enumerate pathways with <strong>RP2paths</strong><a class="headerlink" href="#enumerate-pathways-with-rp2paths" title="Permanent link">&para;</a></h2>
+<p>The RetroPath2.0 algorithm produces a reaction network, exploring reachable compounds and reactions starting from the target compound. However, no consideration are made regarding the splitting of this network into individual pathways.</p>
+<p>Here, we will investigate how to split the network into individual pathways. A valid pathway starting from only available material (sink metabolites) and reaching the target.</p>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Enumerate pathways</p>
+<p>Run <strong>RP2paths</strong> (Galaxy Version 1.5.0) with the following parameters:<br />
+    - <strong>"RetroPath2.0 Pathways"</strong>: <code>Reaction_Network</code> (output of <strong>RetroPath2.0</strong>)</p>
+</div>
+<details class="question">
+<summary>Q1: What does this tool do?</summary>
+<p>This tool takes the reaction network produced by RetroPath2.0 and identifies individual pathways that connect the target compound to the sink metabolites.</p>
+</details>
+<details class="question">
+<summary>Q2: How many files are produced? What are they?</summary>
+<p>2 files are produced: one containing the compounds and the other one containing the pathways.</p>
+</details>
+<details class="question">
+<summary>Q3: What is the format of the output files?</summary>
+<p>The output files are in CSV format.</p>
+</details>
+<details class="question">
+<summary>Q4: How many pathways are found?</summary>
+<p>150.</p>
+</details>
+<h2 id="refine-reactions">Refine reactions<a class="headerlink" href="#refine-reactions" title="Permanent link">&para;</a></h2>
+<p>Reaction rules are often very generic, meaning that one rule can correspond to several template reactions. In addition, some compounds are excluded from the rules: on the left side, because only one substrate is considered at a time, and on the right side, because some compounds are by purpose omitted (mostly cofactors). Here the aim is to put back excluded cofactors and these cofactors in the predicted reactions.</p>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Refine reactions</p>
+<p>Run <strong>Complete Reactions</strong> (Galaxy Version 5.12.2) with the following parameters:<br />
+    - <strong>"RP2paths pathways"</strong>: <code>master_pathways</code> (output of <strong>RP2paths</strong>)<br />
+    - <strong>"RP2paths compounds"</strong>: <code>compounds</code> (output of <strong>RP2paths</strong>)<br />
+    - <strong>"RetroPath2.0 metabolic network"</strong>: <code>Reaction_Network</code> (output of <strong>RetroPath2.0</strong>)<br />
+    - <strong>"Sink from SBML"</strong>: <code>sink</code> (output of <strong>Sink from SBML</strong>)</p>
+</div>
+<details class="question">
+<summary>Q1: What is the format of the output file?</summary>
+<p>A collection of SBML files, with one file per pathway.</p>
+</details>
+<details class="question">
+<summary>Q2: What is the benefit of this format?</summary>
+<p>SBML is a standard format for representing computational models in systems biology, allowing for easy sharing and analysis of biological pathways.</p>
+</details>
+<details class="question">
+<summary>Q3: How many pathways are found?</summary>
+<p>10.</p>
+</details>
+<details class="question">
+<summary>Q4: Do these pathways are a good solution?</summary>
+<p>We don't know if they represent a good solution. We need to evaluate them.</p>
+</details>
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>In this tutorial we produced candidates pathways to produce Xylitol in an Esherichia Coli strain.</p>
+<p>Three main steps were involved:</p>
+<ol>
+<li>Pre-processing input data</li>
+<li>Run Retrosynthesis algorithm with RetroPath2.0</li>
+<li>Enumerate all solutions found by RetroPath2.0</li>
+</ol>
+<!-- ## Useful Commands
+
+=== "Linux / macOS"
+    <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>activate<span class="w"> </span>synbiocad
+</code></pre></div>
+=== "Windows (PowerShell)"
+    ```powershell
+    conda activate synbiocad
+    ``` -->
+
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>Attributions: Thomas Duigou, Kenza Bazi-Kabbaj, Guillaume Gricourt, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon.</p>
+<p>This tutorial is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<!-- ## References -->
+
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:herisson2022">
+<p>Hérisson, J., T. Duigou, M. du Lac, K. Bazi-Kabbaj, M. S. Azad et al., 2022 Galaxy-SynBioCAD: Automated Pipeline for Synthetic Biology Design and Engineering. <a href="https://doi.org/10.1038/s41467-022-32661-x">10.1038/s41467-022-32661-x</a>&#160;<a class="footnote-backref" href="#fnref:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:duigou2019">
+<p>Duigou, T., M. du Lac, P. Carbonell, and J.-L. Faulon, 2018 RetroRules: a database of reaction rules for engineering biology. Nucleic Acids Research 47: D1229–D1235. <a href="https://doi.org/10.1093/nar/gky940">10.1093/nar/gky940</a>&#160;<a class="footnote-backref" href="#fnref:duigou2019" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:delepine2018">
+<p>Delépine, B., T. Duigou, P. Carbonell, and J.-L. Faulon, 2018 RetroPath2.0: A retrosynthesis workflow for metabolic engineers. Metabolic Engineering 45: 158–170. <a href="https://doi.org/10.1016/j.ymben.2017.12.002">10.1016/j.ymben.2017.12.002</a>&#160;<a class="footnote-backref" href="#fnref:delepine2018" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

@@ -1,23 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
-         <loc>https://&lt;your-user&gt;.github.io/&lt;your-repo&gt;/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://tduigou.github.io/galaxy-synbiocad-tutos/</loc>
+         <lastmod>2025-09-23</lastmod>
     </url>
     <url>
-         <loc>https://&lt;your-user&gt;.github.io/&lt;your-repo&gt;/about/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://tduigou.github.io/galaxy-synbiocad-tutos/about/</loc>
+         <lastmod>2025-09-23</lastmod>
     </url>
     <url>
-         <loc>https://&lt;your-user&gt;.github.io/&lt;your-repo&gt;/tuto-1/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://tduigou.github.io/galaxy-synbiocad-tutos/tuto-1-retrosynthesis/</loc>
+         <lastmod>2025-09-23</lastmod>
     </url>
     <url>
-         <loc>https://&lt;your-user&gt;.github.io/&lt;your-repo&gt;/tuto-2/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://tduigou.github.io/galaxy-synbiocad-tutos/tuto-2/</loc>
+         <lastmod>2025-09-23</lastmod>
     </url>
     <url>
-         <loc>https://&lt;your-user&gt;.github.io/&lt;your-repo&gt;/tuto-3/</loc>
-         <lastmod>2025-09-22</lastmod>
+         <loc>https://tduigou.github.io/galaxy-synbiocad-tutos/tuto-3/</loc>
+         <lastmod>2025-09-23</lastmod>
     </url>
 </urlset>
