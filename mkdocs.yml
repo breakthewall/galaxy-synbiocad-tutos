@@ -60,7 +60,8 @@ extra_css:
 nav:
   - Home: index.md
   - Tutorials:
-    - Retrosynthesis: tuto-1-retrosynthesis.md
-    - Pathway Design: tuto-2-pathway-analysis.md
-    - Genetic Design: tuto-3-genetic-design.md
-  - About: about.md
+    - 1 — Retrosynthesis: tuto-1-retrosynthesis.md
+    - 2 — Pathway Design: tuto-2-pathway-analysis.md
+    - 3 — Genetic Design: tuto-3-genetic-design.md
+  - About:
+    - License: license.md
