@@ -348,12 +348,6 @@ Four main steps were involved:
 3. Enumerate all solutions found by RetroPath2.0
 4. Complete reactions and convert pathways to SBML files
 
-## License
-
-Attributions: Thomas Duigou, Kenza Bazi-Kabbaj, Guillaume Gricourt, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon.
-
-This tutorial is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-
 ## References
 
 \bibliography

@@ -302,12 +302,6 @@ To select the best pathways for producing the Xylitol in _E. coli_, some metrics
 
 The best pathway for producing Xylitol in _E. coli_ is **`rp_002_0001`** with a global score of **`0.974`**. Further investigations should be performed such as identifying potential enzyme sequences for the reactions, codon optimization, DNA synthesis and assembly to finally express the pathway in the chassis organism.
 
-## License
-
-Attributions: Thomas Duigou, Kenza Bazi-Kabbaj, Guillaume Gricourt, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon.
-
-This tutorial is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-
 ## References
 
 \bibliography
