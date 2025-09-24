@@ -383,6 +383,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#create-a-new-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#metabolic-model" class="md-nav__link">
     <span class="md-ellipsis">
       Metabolic model
@@ -611,6 +620,15 @@
       <ul class="md-nav__list">
         
           <li class="md-nav__item">
+  <a href="#create-a-new-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#metabolic-model" class="md-nav__link">
     <span class="md-ellipsis">
       Metabolic model
@@ -760,7 +778,7 @@
 <p><img alt="Retrosynthesis Workflow" src="../assets/retrosynthesis_workflow.png" width="720" /><br />
 </p>
 <figcaption>
-<p>The Retrosynthesis Workflow.</p>
+<p>Retrosynthesis Workflow</p>
 </figcaption>
 </figure>
 <p>Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.</p>
@@ -784,6 +802,17 @@
 <p>In the course of this tutorial, we'll focus on the production of <strong>xylitol</strong> in an Escherichia Coli strain. To model the metabolism of this strain, we will use the <em>E. coli</em> core model available in the BiGG database<sup id="fnref:king2016"><a class="footnote-ref" href="#fn:king2016">4</a></sup>.</p>
 </div>
 <p>The data used are pretty straight forward to obtain. Firstly, we download an SBML model, then we select all sinks to use into the RetroPath2.0 software from this model. Lastly, we request from RetroRules all possible reactions to find a chemical reaction cascade that produces the target.</p>
+<h3 id="create-a-new-history">Create a new history<a class="headerlink" href="#create-a-new-history" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">How-to: Create a new history</p>
+<ol>
+<li>Click on the <i class="fa-solid fa-plus icon" aria-hidden="true"></i> icon, right panel (top of the history panel).</li>
+<li>Select <strong>Create New</strong>.</li>
+<li>Rename history to <strong><code>RetroSynthesis - Xylitol</code></strong> by clicking on its name (default is "Unnamed history").</li>
+</ol>
+<p>Source: <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-new-history">Creating a New History — Galaxy FAQ</a></p>
+<p><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span> It is recommended to create a new history for each tutorial to avoid confusion with existing datasets.</p>
+</div>
 <h3 id="metabolic-model">Metabolic model<a class="headerlink" href="#metabolic-model" title="Permanent link">&para;</a></h3>
 <div class="admonition example">
 <p class="admonition-title">Hands-on: Acquire a SBML model</p>
