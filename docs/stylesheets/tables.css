@@ -1,0 +1,24 @@
+/* Tables minimalistes dans MkDocs Material */
+.md-typeset .md-typeset__table table {
+  /* border-collapse: collapse; */
+  width: 100%;
+  line-height: 1.3;              /* réduit l'interligne */
+  border: none;                  /* pas de bordure externe */
+}
+
+.md-typeset .md-typeset__table table th,
+.md-typeset .md-typeset__table table td {
+  border: none;                  /* pas de bordure interne */
+  padding: .25em 1em;           /* espace vertical réduit */
+}
+
+/* Lignes horizontales sobres */
+.md-typeset .md-typeset__table table th {
+  border-bottom: 1px solid #ddd; /* séparation en-tête */
+  font-weight: 600;
+  text-align: left;
+}
+
+.md-typeset .md-typeset__table table tr + tr {
+  border-top: 1px solid #eee;    /* fine ligne entre les lignes */
+}
