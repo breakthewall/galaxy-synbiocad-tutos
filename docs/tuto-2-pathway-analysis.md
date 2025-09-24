@@ -20,7 +20,7 @@ Four main steps will be run using the following workflow:
 
 <figure class="numbered" markdown>
   ![Pathway Analysis](assets/pathway_analysis_workflow.jpg){ width="720" }
-  <figcaption markdown>The Pathway Analysis Workflow</figcaption>
+  <figcaption markdown>Pathway Analysis Workflow</figcaption>
   <!-- <figcaption markdown>Figure 1 — The *Pathway Analysis* Workflow viewed from the Galaxy editor interface. The pathway analysis workflow will evaluate and rank pathways based on multiple metrics. First, Flux Balance Analysis (FBA) node will take as inputs a collection of SBMLs representing the heterologous pathways to be evaluated, another SBML representing the chassis, and 2 additional inputs are expected for indicating the biomass reaction ID and the cell compartment ID that will be used during the FBA analysis. The FBA method will optimize the production of the target under the constraint that the model should still produce some level biomass. Then, the Thermo tool is used to estimate thermodynamics values for each pathway to know whether it is favorable towards target production in physiological conditions. After that the Score Pathway tool will calculate a global score combining target flux, pathway thermodynamics, pathway length and enzyme availability. Finally, the pathways are ranked based on the global score using the Rank Pathways tool. All exchange files are SBMLs. The output is a CSV file which contains the pathway IDs and their corresponding global score.</figcaption> -->
 </figure>
 
@@ -45,9 +45,12 @@ The input data required are:
 
 ### Create a new history
 
-!!! example "Hands-on: Create a new history"
+!!! example "How-to: Create a new history"
+    Create as new history named **`Pathway Analysis - Xylitol`**.
 
-    Create a new history named **`Pathway Analysis - Xylitol`** by following [Creating a new history — Galaxy FAQ](https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-new-history).
+    Details: [Creating a New History — Galaxy FAQ](https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-new-history)
+
+    :material-alert: It is recommended to create a new history for each tutorial to avoid confusion with existing datasets.
 
 ### Add pathways and model files
 
@@ -304,7 +307,6 @@ The best pathway for producing Xylitol in _E. coli_ is **`rp_002_0001`** with a 
 Attributions: Thomas Duigou, Kenza Bazi-Kabbaj, Guillaume Gricourt, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon.
 
 This tutorial is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
-
 
 ## References
 

@@ -25,7 +25,7 @@ Lastly, the metabolic network is then deconstructed into individual pathways usi
 
 <figure class="numbered" markdown>
   ![Retrosynthesis Workflow](assets/retrosynthesis_workflow.png){ width="720" }
-  <figcaption markdown>The Retrosynthesis Workflow.</figcaption>
+  <figcaption markdown>Retrosynthesis Workflow</figcaption>
 </figure>
 
 Note that we will run the steps of this workflow individually so as not to neglect the understanding of the intermediate steps as well. Then, we will run the workflow automatically so that it itself retrieves the outputs from the previous step and gives them as input to the next tool.
@@ -47,6 +47,17 @@ RetroSynthesis workflow will be run with the following inputs:
     In the course of this tutorial, we'll focus on the production of **xylitol** in an Escherichia Coli strain. To model the metabolism of this strain, we will use the *E. coli* core model available in the BiGG database[@king2016].
 
 The data used are pretty straight forward to obtain. Firstly, we download an SBML model, then we select all sinks to use into the RetroPath2.0 software from this model. Lastly, we request from RetroRules all possible reactions to find a chemical reaction cascade that produces the target.
+
+### Create a new history
+
+!!! example "How-to: Create a new history"
+    1. Click on the {{ icon("gx-new-history") }} icon, right panel (top of the history panel).
+    2. Select **Create New**.
+    3. Rename history to **`RetroSynthesis - Xylitol`** by clicking on its name (default is "Unnamed history").
+
+    Source: [Creating a New History — Galaxy FAQ](https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-new-history)
+
+    :material-alert: It is recommended to create a new history for each tutorial to avoid confusion with existing datasets.
 
 ### Metabolic model
 
