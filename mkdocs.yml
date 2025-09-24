@@ -25,6 +25,13 @@ theme:
 
 plugins:
   - search
+  - macros
+  - bibtex:
+      bib_file: docs/refs.bib
+      csl_file: docs/american-chemical-society.csl
+      # csl_file: docs/ieee.csl
+      # csl_file: docs/din-1505-2-alphanumeric.csl
+      enable_inline_citations: true
 
 markdown_extensions:
   - nl2br
@@ -44,10 +51,16 @@ markdown_extensions:
       emoji_generator: !!python/name:material.extensions.emoji.to_svg
   - footnotes
 
+extra_css:
+  - https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css
+  - stylesheets/icons.css
+  - stylesheets/figures.css
+  - stylesheets/tables.css
+
 nav:
   - Home: index.md
   - Tutorials:
-    - Pathway Design (example): tuto-2.md
     - Retrosynthesis: tuto-1-retrosynthesis.md
-    - Analysis & Visualization (example): tuto-3.md
+    - Pathway Design: tuto-2-pathway-analysis.md
+    - Genetic Design: tuto-3-genetic-design.md
   - About: about.md
