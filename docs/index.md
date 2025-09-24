@@ -10,8 +10,8 @@ or copy/paste from the Galaxy Training Material.
 
 ## Tutorials
 
-- [Analysis & Visualization (example)](tuto-3.md)
 - [Retrosynthesis](tuto-1-retrosynthesis.md)
 - [Pathway Design](tuto-2-pathway-analysis.md)
+- [Genetic Design](tuto-3-genetic-design.md)
 
 > Source of inspiration: [Galaxy Training Material](https://github.com/galaxyproject/training-material).
