@@ -1,0 +1,1168 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Getting started tutorials for Galaxy-SynBioCAD tools">
+      
+      
+      
+        <link rel="canonical" href="https://tduigou.github.io/galaxy-synbiocad-tutos/tuto-2-pathway-analysis/">
+      
+      
+        <link rel="prev" href="../tuto-1-retrosynthesis/">
+      
+      
+        <link rel="next" href="../tuto-3-genetic-design/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.20">
+    
+    
+      
+        <title>Pathway Design - Galaxy-SynBioCAD • Tutorials</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.e53b48f4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    
+      <link rel="stylesheet" href="../stylesheets/icons.css">
+    
+      <link rel="stylesheet" href="../stylesheets/figures.css">
+    
+      <link rel="stylesheet" href="../stylesheets/tables.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#data-preparation" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Galaxy-SynBioCAD • Tutorials" class="md-header__button md-logo" aria-label="Galaxy-SynBioCAD • Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Galaxy-SynBioCAD • Tutorials
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Pathway Design
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_0">
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-hidden="true"  type="radio" name="__palette" id="__palette_1">
+    
+  
+</form>
+      
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+        <div class="md-search__suggest" data-md-component="search-suggest"></div>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/tduigou/galaxy-synbiocad-tutos" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Galaxy-SynBioCAD • Tutorials" class="md-nav__button md-logo" aria-label="Galaxy-SynBioCAD • Tutorials" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Galaxy-SynBioCAD • Tutorials
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/tduigou/galaxy-synbiocad-tutos" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 7.0.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2025 Fonticons, Inc.--><path d="M439.6 236.1 244 40.5c-5.4-5.5-12.8-8.5-20.4-8.5s-15 3-20.4 8.4L162.5 81l51.5 51.5c27.1-9.1 52.7 16.8 43.4 43.7l49.7 49.7c34.2-11.8 61.2 31 35.5 56.7-26.5 26.5-70.2-2.9-56-37.3L240.3 199v121.9c25.3 12.5 22.3 41.8 9.1 55-6.4 6.4-15.2 10.1-24.3 10.1s-17.8-3.6-24.3-10.1c-17.6-17.6-11.1-46.9 11.2-56v-123c-20.8-8.5-24.6-30.7-18.6-45L142.6 101 8.5 235.1C3 240.6 0 247.9 0 255.5s3 15 8.5 20.4l195.6 195.7c5.4 5.4 12.7 8.4 20.4 8.4s15-3 20.4-8.4l194.7-194.7c5.4-5.4 8.4-12.8 8.4-20.4s-3-15-8.4-20.4"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Home
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    
+    
+    
+    
+      
+        
+        
+      
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
+      
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="">
+            
+  
+  
+  <span class="md-ellipsis">
+    Tutorials
+    
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Tutorials
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuto-1-retrosynthesis/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Retrosynthesis
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Pathway Design
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Pathway Design
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-pathways-and-model-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add pathways and model files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estimate-production-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate production flux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate thermodynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-global-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate global scores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualize pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../tuto-3-genetic-design/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Genetic Design
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../about/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    About
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#data-preparation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Data Preparation
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Data Preparation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#create-a-new-history" class="md-nav__link">
+    <span class="md-ellipsis">
+      Create a new history
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#add-pathways-and-model-files" class="md-nav__link">
+    <span class="md-ellipsis">
+      Add pathways and model files
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#pathway-analysis" class="md-nav__link">
+    <span class="md-ellipsis">
+      Pathway Analysis
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Pathway Analysis">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#estimate-production-flux" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate production flux
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-thermodynamics" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate thermodynamics
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#estimate-global-scores" class="md-nav__link">
+    <span class="md-ellipsis">
+      Estimate global scores
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#visualize-pathways" class="md-nav__link">
+    <span class="md-ellipsis">
+      Visualize pathways
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#conclusion" class="md-nav__link">
+    <span class="md-ellipsis">
+      Conclusion
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#license" class="md-nav__link">
+    <span class="md-ellipsis">
+      License
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#references" class="md-nav__link">
+    <span class="md-ellipsis">
+      References
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+  
+  
+
+
+<h1 id="tutorial-pathway-design">Tutorial — Pathway Design<a class="headerlink" href="#tutorial-pathway-design" title="Permanent link">&para;</a></h1>
+<p>Progress in synthetic biology is enabled by powerful bioinformatics tools such as those aimed to design metabolic pathways for the production of chemicals. These tools are available in SynBioCAD portal which is the first Galaxy set of tools for synthetic biology and metabolic engineering<sup id="fnref:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>.</p>
+<p>In this tutorial, we will use a set of tools from the <strong>Pathway Analysis workflow</strong> which will enable you to evaluate a set of heterologous pathways previously produced by the RetroSynthesis workflow in a chassis organism (<em>E. coli</em>). These tools are available in the <a href="https://galaxy-synbiocad.org">Galaxy SynbioCAD platform</a>.</p>
+<p>Here we will identify the theoretically best performing pathways by ranking them based on the four following criteria: target product flux, thermodynamic feasibility, pathway length and enzyme availability.</p>
+<p>We recommend that you follow the Retrosynthesis tutorial before starting the current tutorial which will enable you to find pathways to synthesize a target compound with <em>E. coli</em>.</p>
+<p>Four main steps will be run using the following workflow:</p>
+<ol>
+<li>
+<p>To rank the computed heterologous pathways, we need to calculate some metrics. This is why an in-house Flux Balance Analysis (FBA) was developed to calculate the production flux of a given target (e.g. xylotol, lycopene, ...). The method forces a fraction of its maximal flux through the biomass reaction while optimizing for the target molecule. This is achieved by the <em>Flux Balance Analysis</em> tool.</p>
+</li>
+<li>
+<p>The <em>Thermo</em> tool is used to estimate thermodynamics values (based on Gibbs free energies) for each pathway to know whether a producing pathway is feasible in physiological conditions. The contribution of individual reactions to the final pathway thermodynamic is balanced solving a linear equation system.</p>
+</li>
+<li>
+<p>The <em>Score Pathway</em> tool is used to calculate a global score combining target flux, pathway thermodynamics, pathway length and enzyme availability.</p>
+</li>
+<li>
+<p>Pathways are ranked based on the global score using the <em>Rank Pathways</em> tool.</p>
+</li>
+</ol>
+<figure class="numbered">
+<p><img alt="Pathway Analysis" src="../assets/pathway_analysis_workflow.jpg" width="720" /><br />
+</p>
+<figcaption>
+<p>The Pathway Analysis Workflow</p>
+</figcaption>
+<!-- <figcaption markdown>Figure 1 — The *Pathway Analysis* Workflow viewed from the Galaxy editor interface. The pathway analysis workflow will evaluate and rank pathways based on multiple metrics. First, Flux Balance Analysis (FBA) node will take as inputs a collection of SBMLs representing the heterologous pathways to be evaluated, another SBML representing the chassis, and 2 additional inputs are expected for indicating the biomass reaction ID and the cell compartment ID that will be used during the FBA analysis. The FBA method will optimize the production of the target under the constraint that the model should still produce some level biomass. Then, the Thermo tool is used to estimate thermodynamics values for each pathway to know whether it is favorable towards target production in physiological conditions. After that the Score Pathway tool will calculate a global score combining target flux, pathway thermodynamics, pathway length and enzyme availability. Finally, the pathways are ranked based on the global score using the Rank Pathways tool. All exchange files are SBMLs. The output is a CSV file which contains the pathway IDs and their corresponding global score.</figcaption> -->
+</figure>
+<div class="admonition tip">
+<p class="admonition-title">Before starting</p>
+<ul>
+<li><strong>Navigation</strong>: Use the right sidebar to navigate through the tutorial.</li>
+<li><strong>Tools</strong>: Each tool is represented by its icon <i class="fa-solid fa-wrench icon" aria-hidden="true"></i> and version <i class="fa-solid fa-cubes icon" aria-hidden="true"></i>.</li>
+<li><strong>Troubleshooting</strong>: for issues using Galaxy please check the <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/">Galaxy FAQ</a>.</li>
+<li><strong>Galaxy FAQ</strong>: web page is long, use your browser search function (Ctrl+F or Cmd+F) to find relevant topics.</li>
+</ul>
+</div>
+<h2 id="data-preparation">Data Preparation<a class="headerlink" href="#data-preparation" title="Permanent link">&para;</a></h2>
+<p>The input data required are:</p>
+<ul>
+<li>
+<p>A <strong>collection of pathways provided as SBML</strong> such as those outputted by the RetroSynthesis workflow.</p>
+</li>
+<li>
+<p>A <strong>metabolic model</strong> of the chassis organism (e.g. <em>E. coli</em>), provided as an SBML file.</p>
+</li>
+</ul>
+<div class="admonition info">
+<p class="admonition-title">Targeted compound and chassis</p>
+<p>In the course of this tutorial, we will focus on the bioproduction of <strong>xylitol</strong> in an Escherichia Coli strain.</p>
+<p>The <strong>pathways to investigate were obtained from the Retrosynthesis tutorial</strong>, and the chassis organism is modeled by the <strong><em>E. coli</em> core model</strong> (obtained from the BiGG database<sup id="fnref:king2016"><a class="footnote-ref" href="#fn:king2016">4</a></sup>).</p>
+</div>
+<h3 id="create-a-new-history">Create a new history<a class="headerlink" href="#create-a-new-history" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Create a new history</p>
+<p>Create a new history named <strong><code>Pathway Analysis - Xylitol</code></strong> by following <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-new-history">Creating a new history — Galaxy FAQ</a>.</p>
+</div>
+<h3 id="add-pathways-and-model-files">Add pathways and model files<a class="headerlink" href="#add-pathways-and-model-files" title="Permanent link">&para;</a></h3>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Add pathways and model files</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:1"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">Option 1: Upload from URLs</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Import pathways files from the online resources:</p>
+<div class="highlight"><pre><span></span><code>https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_002_0001.xml
+https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_004_0001.xml
+https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_005_0001.xml
+https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_007_0001.xml
+</code></pre></div>
+<details class="tip">
+<summary>How-to: Importing via links</summary>
+<ul>
+<li>Copy link(s) to clipboard</li>
+<li>Click <i class="fa-solid fa-upload icon" aria-hidden="true"></i><strong>Upload Data</strong> at the top of the tool panel</li>
+<li>Select <i class="fa-solid fa-pen-to-square icon" aria-hidden="true"></i><strong>Paste/Fetch Data</strong></li>
+<li>Paste link(s) into text field</li>
+<li>Click <strong>Start</strong></li>
+<li><strong>Close</strong> the window</li>
+</ul>
+<p>More details: <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-importing-via-links">Import via Link — Galaxy FAQ</a></p>
+</details>
+</li>
+<li>
+<p>Create a collection (list) named <strong><code>Predicted Pathways</code></strong> and containing the SBML pathways. <span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span> <strong>Do not</strong> include the model file.</p>
+<details class="tip">
+<summary>How-to: Creating a dataset collection</summary>
+<p>See: <a href="https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-creating-a-dataset-collection">Creating a dataset collection — Galaxy FAQ</a></p>
+</details>
+</li>
+<li>
+<p>Import model file:</p>
+<div class="highlight"><pre><span></span><code>https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/e_coli_core.xml
+</code></pre></div>
+</li>
+<li>
+<p>Rename the <em>E. coli</em> model to <strong><code>Model - SBML</code></strong>.</p>
+</li>
+</ol>
+</div>
+</div>
+</div>
+</div>
+<!-- === "Option 2: Copy from previous history"
+    Copy the pathways and model from the history used in the Retrosynthesis tutorial.
+
+    ??? tip "Copying datasets between histories"
+        1. Click on the gear icon which is on the top of the list of datasets in the history panel
+        2. Click on **Copy Datasets**
+        3. Select the source history (the one used in the Retrosynthesis tutorial)
+        4. Select the desired files to copy
+        5. Select the goal history (the current history one _Pathway Analysis_)
+        6. Validate by ‘Copy History Items’
+
+        More details: [Copy Datasets Between Histories — Galaxy FAQ](https://training.galaxyproject.org/training-material/faqs/galaxy/#tip-copy-a-dataset-between-histories) -->
+
+<h2 id="pathway-analysis">Pathway Analysis<a class="headerlink" href="#pathway-analysis" title="Permanent link">&para;</a></h2>
+<h3 id="estimate-production-flux">Estimate production flux<a class="headerlink" href="#estimate-production-flux" title="Permanent link">&para;</a></h3>
+<p>Notice that the starting compounds (in other words, <em>the precursors</em>) of the predicted pathways (also referred as the <em>heterologous pathways</em>) are compounds that have been initially extracted from the genome-scale metabolic model (GEM) of the organism we are interested in (also referred as <em>chassis</em>). While this step is out of the scope of the present Pathway Analysis tutorial, this means that the precursors of predicted pathways are also present in the chassis model. Hence, predicted pathways and the chassis organism model can be merged to construct "augmented" whole-cell models, enabling flux analysis of these metabolic systems. This is what we'll do here to predict the production flux of a compound of interest.</p>
+<p>Within the frame of this tutorial, we'll use <em>E. coli</em> ecoli_core GEM (downloaded from the <a href="http://bigg.ucsd.edu/">BiGG database</a>) to model the metabolism of <em>E. coli</em> and target is xylitol. The extraction of precursor compounds and the pathway prediction have already been performed during the RetroSynthesis workflow (available in <a href="https://galaxy-synbiocad.org">Galaxy SynbioCAD platform</a>).</p>
+<p>The FBA (Flux Balance Analysis) method used to calculate the flux is a mathematical approach (as decribed in section Methods<sup id="fnref2:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>) which uses the COBRApy package<sup id="fnref:ebrahim2013"><a class="footnote-ref" href="#fn:ebrahim2013">2</a></sup> and proposes 3 different analysis methods (standard FBA, parsimonious FBA, fraction of reaction). The first two methods are specific to the COBRApy package and the last one <code>Fraction of Reaction</code> is an in-house analysis method to consider the cell needs for its own maintenance while producing the target compound.</p>
+<p>Within the workflow, the purpose of the <em>Flux Balance Analysis</em> tool is to predict the production flux of the targeted compound, while considering the cellular needs. Under such simulation conditions, the analysis that returns a low production flux may be due to some precursor compounds having a limiting production flux, nor cofactor fluxes involved not being sufficiently balanced by the chassis native metabolism. Pathways with high flux would be caused by both the precursor compounds and the cofactors being in abundance. In either case, bottlenecks that limit the flux of the pathway may be investigated (this is outside of the scope of the workflow) and pathways that do not theoretically generate high yields can be filtered out.</p>
+<p>We first perform an FBA (with COBRApy) optimizing the biomass reaction and record its maximal theoretical flux. The upper and lower bounds of the biomass reaction are then set to a same amount, equals to a fraction of its previously recorded optimum (default is 75% of its optimum). The method then performs a second FBA where biomass flux is enforced to this fraction of its optimum while optimizing the target production flux. Simulated fluxes are recorded directly into the SBML file and all changed flux bounds are reset to their original values before saving the output file.</p>
+<figure class="numbered">
+<p><img alt="Pathway Analysis" src="../assets/fba_calculation.png" width="720" /><br />
+</p>
+<figcaption>
+<p>Flux Balance Analysis (FBA) workflow for pathway analysis.</p>
+</figcaption>
+<!-- <figcaption markdown>Figure 2 — This picture describes the process to obtain annotated SBML pathways with calculated fluxes. First, FBA tool takes as input one SBML representing the heterologous pathway and another SBML representing the chassis. The two SBMLs are merged to render an augmented model containing both the reactions of the heterologous pathway and the chassis. Then FBA tool uses the COBRApy package to optimize the producing flux of the target reaction, under the constraint that the flux of the biomass reaction should be equals to 75% of its maximal theoretical value. At the end, the calculated fluxes are recorded as annotations into the SBML of the heterologous pathway.</figcaption> -->
+</figure>
+<div class="admonition info">
+<p class="admonition-title">Note</p>
+<p>Blocking compounds that cannot provide any flux are temporarily removed from heterologous reactions for the FBA evaluation. Such cases can happen due to side substrates or products of predicted reactions that do not match any chassis compound, representing dead-end paths.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Flux Balance Analysis</p>
+<p>Run <i class="fa-solid fa-wrench icon" aria-hidden="true"></i><strong>Flux balance analysis</strong> (<i class="fa-solid fa-cubes icon" aria-hidden="true"></i>Galaxy Version 6.5.0+galaxy0) with parameters:</p>
+<ul>
+<li>Select <strong>Pathway(s)</strong>:<ul>
+<li><strong>Dataset collection</strong> input type <i class="fa-regular fa-folder icon" aria-hidden="true"></i> <span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span> Double check input type</li>
+<li>Dataset <i class="fa-solid fa-right-to-bracket icon" aria-hidden="true"></i> <strong><code>Predicted Pathways</code></strong></li>
+</ul>
+</li>
+<li>Select <strong>Model</strong>:<ul>
+<li><strong>Single dataset</strong> input type <i class="fa-regular fa-file icon" aria-hidden="true"></i></li>
+<li>Dataset <i class="fa-solid fa-right-to-bracket icon" aria-hidden="true"></i> <strong><code>Model - SBML</code></strong></li>
+</ul>
+</li>
+<li><strong>SBML compartment ID</strong>: <strong><code>c</code></strong>.</li>
+<li><strong>Reaction ID to optimise</strong>: <strong><code>rxn_target</code></strong></li>
+<li><strong>Biomass reaction ID</strong>: use <strong><code>R_BIOMASS_Ecoli_core_w_GAM</code></strong>.</li>
+<li><strong>Constraint based simulation type</strong>: select <strong><code>Fraction of Reaction</code></strong></li>
+<li><strong>Advanced options <i class="fa-solid fa-eye icon" aria-hidden="true"></i></strong>: leave default values</li>
+</ul>
+<details class="question">
+<summary>Q1: What are the format and the extension of the output files ?</summary>
+<ol>
+<li>The output is an SBML file with <code>.xml</code> extension.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Q2: What is the FBA score for <strong><code>rp_002_0001</code></strong> pathway ? <i class="fa-solid fa-triangle-exclamation icon" aria-hidden="true"></i>difficult</summary>
+<ol>
+<li>Click on the output collection to expand it and see the list of SBML files.</li>
+<li>Click <i class="fa-solid fa-eye icon" aria-hidden="true"></i> to open the file <strong><code>rp_002_0001</code></strong>.</li>
+<li>Search (Ctrl+F or Cmd+F) for <strong><code>fba_fraction</code></strong> within a <strong><code>&lt;groups:listOfGroups&gt;</code></strong> section.</li>
+<li>The value is ~ <strong><code>2.48..</code></strong>.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Q3: What does the FBA score represent ?</summary>
+<p>The FBA score represents the production flux of the target compound (here xylitol) when the biomass flux is constrained to 75% of its maximal theoretical value.</p>
+</details>
+<details class="info">
+<summary>Compartment ID</summary>
+<p>You can specify the compartment from which the chemical species were extracted. The default is <strong><code>c</code></strong>, the BiGG code for the cytoplasm.</p>
+</details>
+<details class="info">
+<summary>Reaction ID to optimise</summary>
+<p>The reaction ID to optimize is the reaction producing the target compound within each SBML. It is named <strong><code>rxn_target</code></strong> in the SBMLs produced by the RetroSynthesis workflow. For SBMLs from other sources, check the reaction ID of the reaction producing the target compound and use it as input.</p>
+</details>
+<details class="info">
+<summary>Biomass reaction ID</summary>
+<p>The biomass reaction ID objective stands for the <strong><code>e_coli_core</code></strong> model. For other models, one can search in the model the term <strong><code>biomass</code></strong> and pick the corresponding ID.</p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Rename the output collection</p>
+<p>Rename the output collection to <strong><code>FBA - Annotated Pathways</code></strong>.</p>
+</div>
+<h3 id="estimate-thermodynamics">Estimate thermodynamics<a class="headerlink" href="#estimate-thermodynamics" title="Permanent link">&para;</a></h3>
+<p>The goal of the thermodynamic analysis is to estimate the feasibility of the predicted pathways toward target production, in physiological conditions. The eQuilibrator libraries<sup id="fnref:beber2021"><a class="footnote-ref" href="#fn:beber2021">3</a></sup> are used to calculate the formation energy of compounds by either using public database IDs (when referenced within the tools internal database) or by decomposing the chemical structure and calculating its energy of formation using the component contribution method.</p>
+<p>The reaction Gibbs energy is estimated by combining the energy of formation of the compounds involved in the reaction (with consideration for the stoichiometric coefficients).</p>
+<p>Thermodynamic of a pathway is estimated by combining the Gibbs energy of reactions involved in it. The contribution of individual reactions to the final pathway thermodynamic is balanced using a linear equation system, according to the relative uses of intermediate compounds across the pathway (See Thermodynamics in Methods section for further details<sup id="fnref3:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>. A pathway Gibbs energy below zero indicates that the thermodynamic is favorable toward the production of the target.</p>
+<p>The <em>Thermo</em> Galaxy tool is used to estimate thermodynamics values (based on Gibbs free energies) for each pathway to know whether a producing pathway is feasible in physiological conditions</p>
+<figure class="numbered">
+<p><img alt="Pathway Analysis" src="../assets/thermo_calculation.png" width="720" /><br />
+</p>
+<figcaption>
+<p>Thermodynamic Analysis concepts.</p>
+</figcaption>
+<!-- ![This image describe the process of computing thermodynamics values of a pathway, to assess whether a pathway is favorable towards target production in physiological conditions. rpThermo tool takes as input the output of rpFBA, which corresponds to the pathway to be analyzed (as an SBML file). rpThermo relies on eQuilibrator libraries to calculate the formation energy of compounds. The reaction Gibbs energy is estimated by combining the energy of formation of the compounds involved in the reaction (with consideration for the stoichiometric coefficients). From this, the thermodynamic of a pathway is estimated by combining the Gibbs energy of all reactions taking part in it. The individual contribution of reactions to the final pathway thermodynamic is weighted using a linear equation system, to take into consideration of the relative needs of intermediate compounds across the pathway. For the record, a pathway Gibbs energy below zero indicates that the thermodynamic is favorable toward the production of the target.](../../images/rpthermo.png) -->
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Estimate Thermodynamics</p>
+<p>Because the <em>Thermo</em> tool is resource-intensive and will be time-consuming, <strong>Option 1</strong> has to be used during this tutorial — <strong>Option 2</strong> is provided for information but <i class="fa-solid fa-triangle-exclamation icon" aria-hidden="true"></i> <strong>do not</strong> run it today <i class="fa-solid fa-triangle-exclamation icon" aria-hidden="true"></i>.</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><i class="fa-solid fa-thumbs-up icon" aria-hidden="true"></i> Option 1: Download pre-computed results</label><label for="__tabbed_2_2"><i class="fa-solid fa-triangle-exclamation icon" aria-hidden="true"></i> Option 2: Run Thermo tool — time-consuming</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ol>
+<li>
+<p>Download the pre-computed results on your computer: <a href="https://github.com/tduigou/galaxy-synbiocad-tutos/raw/refs/heads/main/data/pa-thermo/Thermo - FBA - Annotated pathways.zip">Thermo - FBA - Annotated pathways.zip</a></p>
+</li>
+<li>
+<p>Unzip the file (locally on your computer).</p>
+</li>
+<li>
+<p>Upload the unzipped file to your current history:</p>
+<ul>
+<li>Click on <i class="fa-solid fa-upload icon" aria-hidden="true"></i><strong>Upload Data</strong> at the top of the tool panel</li>
+<li>Select <i class="fa-solid fa-laptop icon" aria-hidden="true"></i><strong>Choose local files</strong></li>
+<li>Select all files from unzipped folder (hold Shift key to select multiple files)</li>
+<li>Click <strong>Start</strong></li>
+<li><strong>Close</strong> the window</li>
+</ul>
+</li>
+<li>
+<p>Create a collection (list) named <strong><code>Thermo - FBA - Annotated Pathways</code></strong> and containing the SBML pathways.<br />
+<span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span> <strong>Do not</strong> include other files. <span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span></p>
+</li>
+</ol>
+<details class="question">
+<summary>Q1: What is the thermodynamic value for the reaction with <em>EC number</em> 1.1.1.307 for <strong><code>rp_002_0001</code></strong> pathway?</summary>
+<ol>
+<li>Use the <i class="fa-solid fa-wrench icon" aria-hidden="true"></i><strong>Visualize Pathway</strong> tool to generate a graphical representation of all pathways.</li>
+<li>Click on <strong><code>1.1.1.307</code></strong> reaction belonging to the <strong><code>rp_002_0001</code></strong>.</li>
+<li>On the right panel, look for the ΔrG' (standard Gibbs free energy change) value</li>
+<li>The value is <strong><code>-2.258</code></strong> kJ/mol.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Q2: What a negative ΔrG' indicates?</summary>
+<p>A negative value indicates that the reaction is favorable in physiological conditions, hence it will proceed spontaneously in the forward direction.</p>
+</details>
+</div>
+<div class="tabbed-block">
+<p>Run <i class="fa-solid fa-wrench icon" aria-hidden="true"></i><strong>Thermo</strong> (<i class="gx-version icon" aria-hidden="true"></i>Galaxy Version 6.5.0+galaxy0) with parameters:</p>
+<ul>
+<li>Select <strong>Pathway(s)</strong>:<ul>
+<li><strong>Dataset collection</strong> input type <i class="fa-regular fa-folder icon" aria-hidden="true"></i> <span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span> Double check input type</li>
+<li>Dataset <i class="fa-solid fa-right-to-bracket icon" aria-hidden="true"></i> <strong><code>FBA - Annotated Pathways</code></strong></li>
+</ul>
+</li>
+<li><strong>Advanced options <i class="fa-solid fa-eye icon" aria-hidden="true"></i></strong>: leave default values</li>
+</ul>
+<div class="admonition comment">
+<p class="admonition-title">Note</p>
+<p>The tool takes as input pathways in SBML format and returns annotated pathways (with thermodynamics information for each reaction) in SBML format too.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Rename the output collection</p>
+<p>It not set yet, rename the output collection to <strong><code>Thermo - FBA - Annotated Pathways</code></strong>.</p>
+</div>
+<h3 id="estimate-global-scores">Estimate global scores<a class="headerlink" href="#estimate-global-scores" title="Permanent link">&para;</a></h3>
+<p>The <em>Pathway Score</em> tool provides a global score for a given pathway previously annotated by the <em>Flux Balance Analysis</em> and <em>Thermo</em> tools. This score is computed by a machine learning (ML) model (cf. Machine Learning Global Scoring<sup id="fnref4:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>. The model takes as input features describing the pathway (thermodynamic feasibility, target flux with fixed biomass, length) and the reactions within the pathway (reaction SMARTS, Gibbs free energy, enzyme availability score) and prints out the probability for the pathway to be a valid pathway. The ML model has been trained on literature data (cf. section Benchmarking with literature data<sup id="fnref5:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>) and by a validation trial (cf. section Benchmarking by expert validation trial<sup id="fnref6:herisson2022"><a class="footnote-ref" href="#fn:herisson2022">1</a></sup>).</p>
+<figure class="numbered">
+<p><img alt="Pathway Analysis" src="../assets/pathway_analysis_scoring.png" width="720" /><br />
+</p>
+<figcaption>
+<p>Pathway Score estimation concepts.</p>
+</figcaption>
+<!-- ![This scheme represents the pathway analysis workflow enabling the identification of the best pathways for producing a molecule of interest. To do that the workflow takes as input the collection of pathways to be scored and the metabolic model of the chassis (all files are SBMLs). Iteratively, each pathway is merged with the chassis model, and several metrics are evaluated such as the target production flux (using the rpFBA tool) and the thermodynamics of the pathway (using the rpThermo tool). A global score of each pathway combining these metrics with others is computed using a machine learning method (with the rpScore tool). Finally, the pathways are ranked from best to worst according to their global score (using the rpRanker tool). During the workflow, all metrics are stored as SBML annotations. The final output is a CSV file which contains the pathway IDs and their corresponding global score.](../../images/pathway_analysis_scheme.png) -->
+</figure>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Score Pathways</p>
+<p>Run <strong>Score Pathway</strong> (Galaxy Version 6.5.0+galaxy0) with parameters:</p>
+<ul>
+<li><strong>Pathway(s)</strong>:<ul>
+<li><strong>Dataset collection</strong> input type <i class="fa-regular fa-folder icon" aria-hidden="true"></i> <span style="color:#f59e0b"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 14h-2V9h2m0 9h-2v-2h2M1 21h22L12 2z"/></svg></span></span> Double check input type</li>
+<li>Dataset <i class="fa-solid fa-right-to-bracket icon" aria-hidden="true"></i> <strong><code>Thermo - FBA - Annotated Pathways</code></strong></li>
+</ul>
+</li>
+<li><strong>Advanced options <i class="fa-solid fa-eye icon" aria-hidden="true"></i></strong>: leave default values</li>
+</ul>
+<div class="admonition comment">
+<p class="admonition-title">Outputted files</p>
+<p>The tool outputs new annotated SBML files representing the pathways, containing the <code>global_score</code> annotation, as well as other annotations such as the FBA score and the pathway Gibbs energy.</p>
+</div>
+<details class="question">
+<summary>Q1: What does the computed score represent?</summary>
+<p>The computed score represents the probability for the pathway to be a valid pathway.</p>
+</details>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Rename the output collection</p>
+<p>It not set yet, rename the output collection to <strong><code>Scored - Thermo - FBA - Annotated Pathways</code></strong>.</p>
+</div>
+<h2 id="visualize-pathways">Visualize pathways<a class="headerlink" href="#visualize-pathways" title="Permanent link">&para;</a></h2>
+<div class="admonition example">
+<p class="admonition-title">Hands-on: Visualize pathways</p>
+<p>Run <i class="fa-solid fa-wrench icon" aria-hidden="true"></i><strong>Visualize pathways</strong> (<i class="fa-solid fa-cubes icon" aria-hidden="true"></i>Galaxy Version 6.5.0+galaxy0) with parameters:</p>
+<ul>
+<li>Select <strong>Source SBMLs format</strong> <i class="fa-solid fa-caret-down icon" aria-hidden="true"></i>: <strong><code>Collection</code></strong></li>
+<li>Select <strong>Source SBML</strong> <i class="fa-solid fa-right-to-bracket icon" aria-hidden="true"></i>: <strong><code>Scored - Thermo - FBA - Annotated Pathways</code></strong></li>
+<li><strong>Advanced options <i class="fa-solid fa-eye icon" aria-hidden="true"></i></strong>: leave default values</li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">View the output</p>
+<ul>
+<li>Click on the <i class="fa-solid fa-eye icon" aria-hidden="true"></i> icon of the output dataset <strong><code>Pathway Visualization</code></strong> to open it.</li>
+<li>Alternatively (1): right-click on the <i class="fa-solid fa-eye icon" aria-hidden="true"></i> icon and select <strong>Open in new tab</strong> to open it in a new browser tab.</li>
+<li>Alternatively (2): click on the <i class="fa-solid fa-download icon" aria-hidden="true"></i> icon and select <strong>Download</strong> to download the file and open it locally with a web browser. </li>
+</ul>
+</div>
+<details class="question">
+<summary>Q1: How many pathways are visualized?</summary>
+<p>There are 4 pathways.</p>
+</details>
+<details class="question">
+<summary>Q2: What is the global score of the pathway <code>rp_002_0001</code>?</summary>
+<ol>
+<li>Click on the pathway <code>rp_002_0001</code> to open it.</li>
+<li>On the left panel, look for the "Info" icon and click on it.</li>
+<li>On the right panel, look for the <code>Global score</code> section.</li>
+<li>The value is <strong><code>0.974</code></strong>.</li>
+</ol>
+</details>
+<details class="question">
+<summary>Q3: What is the best pathway?</summary>
+<p>The best pathway is <code>rp_002_0001</code> with a global score of <strong><code>0.974</code></strong>.</p>
+</details>
+<details class="question">
+<summary>Q4: What is the FBA score of the best pathway?</summary>
+<p>The FBA score of the best pathway <code>rp_002_0001</code> is <strong><code>2.484</code></strong>.</p>
+</details>
+</div>
+<!-- ### Rank annotated pathways
+
+Finally, _Rank Pathways_ ranks the previous set of heterologous pathways, based on their global score, to reveal what are the most likely pathways to produce the target molecule (here it is _lycopene_) in a given organism of interest (_E. coli_ in this tutorial).
+
+!!! example "Hands-on: Rank pathways"
+
+    Run **Rank Pathways** (Galaxy Version 6.5.0+galaxy0) with the following parameters:
+        - **Pathways**: Select the output of the previous **Score Pathway** step.
+
+!!! comment "Note"
+    This tool will output a CSV file which contains the pathway IDs and their corresponding global score.
+
+??? question "Q1: What are the 3 top-ranked pathways?"
+    View the output CSV file and sort the table by the `global_score` column (click on the column header). The top 3 pathways are `rp_002_0001`, `rp_004_0001` and `rp_005_0001`. -->
+
+<h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
+<p>To select the best pathways for producing the Xylitol in <em>E. coli</em>, some metrics have been estimated, namely production flux of the target, pathway thermodynamics. Global score estimation relies on these criteria plus the pathway length and the enzyme availability score using a machine learning model.</p>
+<p>The best pathway for producing Xylitol in <em>E. coli</em> is <strong><code>rp_002_0001</code></strong> with a global score of <strong><code>0.974</code></strong>. Further investigations should be performed such as identifying potential enzyme sequences for the reactions, codon optimization, DNA synthesis and assembly to finally express the pathway in the chassis organism.</p>
+<h2 id="license">License<a class="headerlink" href="#license" title="Permanent link">&para;</a></h2>
+<p>Attributions: Thomas Duigou, Kenza Bazi-Kabbaj, Guillaume Gricourt, Joan Hérisson, Ioana Popescu, Jean-Loup Faulon.</p>
+<p>This tutorial is licensed under <a href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a>.</p>
+<h2 id="references">References<a class="headerlink" href="#references" title="Permanent link">&para;</a></h2>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:herisson2022">
+<p>Hérisson, J.; Duigou, T.; Du Lac, M.; Bazi-Kabbaj, K.; Sabeti Azad, M.; Buldum, G.; Telle, O.; El Moubayed, Y.; Carbonell, P.; Swainston, N.; Zulkower, V.; Kushwaha, M.; Baldwin, G. S.; Faulon, J.-L. The Automated Galaxy-SynBioCAD Pipeline for Synthetic Biology Design and Engineering. <em>Nature Communications</em> <strong>2022</strong>, <em>13</em> (1), 5082. <a href="https://doi.org/10.1038/s41467-022-32661-x">https://doi.org/10.1038/s41467-022-32661-x</a>.&#160;<a class="footnote-backref" href="#fnref:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref2:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref3:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref4:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref5:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a><a class="footnote-backref" href="#fnref6:herisson2022" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+<li id="fn:ebrahim2013">
+<p>Ebrahim, A.; Lerman, J. A.; Palsson, B. O.; Hyduke, D. R. COBRApy: COnstraints-Based Reconstruction and Analysis for Python. <em>BMC Systems Biology</em> <strong>2013</strong>, <em>7</em> (1), 74. <a href="https://doi.org/10.1186/1752-0509-7-74">https://doi.org/10.1186/1752-0509-7-74</a>.&#160;<a class="footnote-backref" href="#fnref:ebrahim2013" title="Jump back to footnote 2 in the text">&#8617;</a></p>
+</li>
+<li id="fn:beber2021">
+<p>Beber, M. E.; Gollub, M. G.; Mozaffari, D.; Shebek, K. M.; Flamholz, A. I.; Milo, R.; Noor, E. [eQuilibrator]{.nocase} 3.0: A Database Solution for Thermodynamic Constant Estimation. <em>Nucleic Acids Research</em> <strong>2021</strong>, gkab1106. <a href="https://doi.org/10.1093/nar/gkab1106">https://doi.org/10.1093/nar/gkab1106</a>.&#160;<a class="footnote-backref" href="#fnref:beber2021" title="Jump back to footnote 3 in the text">&#8617;</a></p>
+</li>
+<li id="fn:king2016">
+<p>King, Z. A.; Lu, J.; Dräger, A.; Miller, P.; Federowicz, S.; Lerman, J. A.; Ebrahim, A.; Palsson, B. O.; Lewis, N. E. BiGG Models: A Platform for Integrating, Standardizing and Sharing Genome-Scale Models. <em>Nucleic Acids Research</em> <strong>2016</strong>, <em>44</em> (D1), D515--D522. <a href="https://doi.org/10.1093/nar/gkv1049">https://doi.org/10.1093/nar/gkv1049</a>.&#160;<a class="footnote-backref" href="#fnref:king2016" title="Jump back to footnote 4 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var labels=set.querySelector(".tabbed-labels");for(var tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8z"/></svg>
+  Back to top
+</button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": ["navigation.instant", "navigation.sections", "navigation.top", "search.suggest", "search.highlight", "content.code.copy", "content.tabs.link"], "search": "../assets/javascripts/workers/search.973d3a69.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.f55a23d4.min.js"></script>
+      
+    
+  </body>
+</html>

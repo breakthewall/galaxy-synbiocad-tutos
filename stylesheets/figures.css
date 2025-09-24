@@ -1,0 +1,19 @@
+/* figure numbering */
+.md-content__inner { counter-reset: figure; }
+
+figure.numbered > figcaption > p {   /* <- applatit le paragraphe */
+  display: inline; 
+  margin: 0;
+}
+
+figure.numbered > figcaption::before {
+  counter-increment: figure;
+  content: "Figure " counter(figure) " — ";
+}
+
+figure.numbered > figcaption {
+  font-size: 0.8em;
+  text-align: center;
+  color: #555;
+  margin-top: 0.25em;
+}
