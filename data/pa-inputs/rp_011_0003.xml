@@ -41,19 +41,19 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb" id="MNXM6" name="NADH-P-OR-NOP" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+      <species metaid="_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa" id="MNXM9" name="inorganic phosphate" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb">
+            <rdf:Description rdf:about="#_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa">
               <bqbiol:is>
                 <rdf:Bag/>
               </bqbiol:is>
             </rdf:Description>
-            <rdf:BRSynth rdf:about="#_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb">
+            <rdf:BRSynth rdf:about="#_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa">
               <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
-                <brsynth:smiles value="[H]N=C(O[H])C1=C([H])N(C2([H])OC([H])(C([H])([H])OP(=O)(O[H])OP(=O)(O[H])OC([H])([H])C3([H])OC([H])(n4c([H])nc5c(N([H])[H])nc([H])nc54)C([H])(OP(=O)(O[H])O[H])C3([H])O[H])C([H])(O[H])C2([H])O[H])C([H])=C([H])C1([H])[H]"/>
-                <brsynth:inchi value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)"/>
-                <brsynth:inchikey value="ACFIXJIJDZMPPO-UHFFFAOYSA-N"/>
+                <brsynth:smiles value="O=P(O)(O)O"/>
+                <brsynth:inchi value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)"/>
+                <brsynth:inchikey value="NBIIXXVUZAFLBC-UHFFFAOYSA-N"/>
               </brsynth:brsynth>
             </rdf:BRSynth>
           </rdf:RDF>
@@ -77,19 +77,19 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0" id="CMPD_0000000005" name="CMPD_0000000005" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+      <species metaid="_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb" id="MNXM6" name="NADH-P-OR-NOP" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0">
+            <rdf:Description rdf:about="#_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb">
               <bqbiol:is>
                 <rdf:Bag/>
               </bqbiol:is>
             </rdf:Description>
-            <rdf:BRSynth rdf:about="#c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0">
+            <rdf:BRSynth rdf:about="#_565b5e3c38feed64054fc6727068060c34dcf6d8715c8474bdc4c11b810845fb">
               <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
-                <brsynth:smiles value="[H]OC([H])([H])C([H])(O[H])C([H])(O[H])C([H])(O[H])C([H])=O"/>
-                <brsynth:inchi value="InChI=1S/C5H10O5/c6-1-3(8)5(10)4(9)2-7/h1,3-5,7-10H,2H2"/>
-                <brsynth:inchikey value="PYMYPHUHKUWMLA-UHFFFAOYSA-N"/>
+                <brsynth:smiles value="[H]N=C(O[H])C1=C([H])N(C2([H])OC([H])(C([H])([H])OP(=O)(O[H])OP(=O)(O[H])OC([H])([H])C3([H])OC([H])(n4c([H])nc5c(N([H])[H])nc([H])nc54)C([H])(OP(=O)(O[H])O[H])C3([H])O[H])C([H])(O[H])C2([H])O[H])C([H])=C([H])C1([H])[H]"/>
+                <brsynth:inchi value="InChI=1S/C21H30N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1,3-4,7-8,10-11,13-16,20-21,29-31H,2,5-6H2,(H2,23,32)(H,36,37)(H,38,39)(H2,22,24,25)(H2,33,34,35)"/>
+                <brsynth:inchikey value="ACFIXJIJDZMPPO-UHFFFAOYSA-N"/>
               </brsynth:brsynth>
             </rdf:BRSynth>
           </rdf:RDF>
@@ -113,6 +113,24 @@
           </rdf:RDF>
         </annotation>
       </species>
+      <species metaid="e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd" id="MNXM137" name="NADP(+)" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+        <annotation>
+          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
+            <rdf:Description rdf:about="#e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd">
+              <bqbiol:is>
+                <rdf:Bag/>
+              </bqbiol:is>
+            </rdf:Description>
+            <rdf:BRSynth rdf:about="#e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd">
+              <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
+                <brsynth:smiles value="N=C(O)c1ccc[n+](C2OC(COP(=O)(O)OP(=O)(O)OCC3OC(n4cnc5c(N)ncnc54)C(OP(=O)(O)O)C3O)C(O)C2O)c1"/>
+                <brsynth:inchi value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p+1"/>
+                <brsynth:inchikey value="XJLXINKUBYWONI-UHFFFAOYSA-O"/>
+              </brsynth:brsynth>
+            </rdf:BRSynth>
+          </rdf:RDF>
+        </annotation>
+      </species>
       <species metaid="bbe0fe1f783793ad97e46a11d16e8c6c2d3b8b6c7b3aaf709af882404cf4d10a" id="MNXM2" name="H2O" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
@@ -131,37 +149,19 @@
           </rdf:RDF>
         </annotation>
       </species>
-      <species metaid="_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa" id="MNXM9" name="inorganic phosphate" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
+      <species metaid="c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0" id="CMPD_0000000005" name="CMPD_0000000005" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
         <annotation>
           <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa">
+            <rdf:Description rdf:about="#c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0">
               <bqbiol:is>
                 <rdf:Bag/>
               </bqbiol:is>
             </rdf:Description>
-            <rdf:BRSynth rdf:about="#_057ac540136d0a978b5b3121d8ef298fe48db86737407cd87b2bae8283c0defa">
+            <rdf:BRSynth rdf:about="#c0af97951181681e2538ea315f054e15f38f7172fc1487ec924ac2c9f687faa0">
               <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
-                <brsynth:smiles value="[H]OP(=O)(O[H])O[H]"/>
-                <brsynth:inchi value="InChI=1S/H3O4P/c1-5(2,3)4/h(H3,1,2,3,4)"/>
-                <brsynth:inchikey value="NBIIXXVUZAFLBC-UHFFFAOYSA-N"/>
-              </brsynth:brsynth>
-            </rdf:BRSynth>
-          </rdf:RDF>
-        </annotation>
-      </species>
-      <species metaid="e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd" id="MNXM137" name="NADP(+)" compartment="c" initialConcentration="1" hasOnlySubstanceUnits="false" boundaryCondition="false" constant="false">
-        <annotation>
-          <rdf:RDF xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#" xmlns:bqbiol="http://biomodels.net/biology-qualifiers/">
-            <rdf:Description rdf:about="#e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd">
-              <bqbiol:is>
-                <rdf:Bag/>
-              </bqbiol:is>
-            </rdf:Description>
-            <rdf:BRSynth rdf:about="#e14a6b92adc9d2acbd65be96d5ec98e8c89ea603e114769cc63c96bd021f82bd">
-              <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
-                <brsynth:smiles value="N=C(O)c1ccc[n+](C2OC(COP(=O)(O)OP(=O)(O)OCC3OC(n4cnc5c(N)ncnc54)C(OP(=O)(O)O)C3O)C(O)C2O)c1"/>
-                <brsynth:inchi value="InChI=1S/C21H28N7O17P3/c22-17-12-19(25-7-24-17)28(8-26-12)21-16(44-46(33,34)35)14(30)11(43-21)6-41-48(38,39)45-47(36,37)40-5-10-13(29)15(31)20(42-10)27-3-1-2-9(4-27)18(23)32/h1-4,7-8,10-11,13-16,20-21,29-31H,5-6H2,(H7-,22,23,24,25,32,33,34,35,36,37,38,39)/p+1"/>
-                <brsynth:inchikey value="XJLXINKUBYWONI-UHFFFAOYSA-O"/>
+                <brsynth:smiles value="[H]OC([H])([H])C([H])(O[H])C([H])(O[H])C([H])(O[H])C([H])=O"/>
+                <brsynth:inchi value="InChI=1S/C5H10O5/c6-1-3(8)5(10)4(9)2-7/h1,3-5,7-10H,2H2"/>
+                <brsynth:inchikey value="PYMYPHUHKUWMLA-UHFFFAOYSA-N"/>
               </brsynth:brsynth>
             </rdf:BRSynth>
           </rdf:RDF>
@@ -246,7 +246,7 @@
             </rdf:Description>
             <rdf:BRSynth rdf:about="#_7af1776cbbaecbf874d7f576d21891f6ad79e3b7c2e726cfd2ee9f5bd6f483c4">
               <brsynth:brsynth xmlns:brsynth="http://brsynth.eu">
-                <brsynth:smiles value="[H]OC1([H])OC([H])(C([H])([H])OP(=O)(O[H])O[H])C([H])(O[H])C1([H])O[H].[H]O[H]&gt;&gt;[H]OC([H])([H])C([H])(O[H])C([H])(O[H])C([H])(O[H])C([H])=O.[H]OP(=O)(O[H])O[H]"/>
+                <brsynth:smiles value="[H]OC1([H])OC([H])(C([H])([H])OP(=O)(O[H])O[H])C([H])(O[H])C1([H])O[H].[H]O[H]&gt;&gt;[H]OC([H])([H])C([H])(O[H])C([H])(O[H])C([H])(O[H])C([H])=O.O=P(O)(O)O"/>
                 <brsynth:rp2_transfo_id value="TRS_0_1_29"/>
                 <brsynth:rule_ids>
                   <brsynth:RR-02-6ddeefebf753e302-12-F/>
@@ -307,11 +307,11 @@
           </rdf:RDF>
         </annotation>
         <groups:listOfMembers>
-          <groups:member groups:idRef="MNXM6"/>
           <groups:member groups:idRef="MNXM15900"/>
+          <groups:member groups:idRef="MNXM6"/>
           <groups:member groups:idRef="MNXM1"/>
-          <groups:member groups:idRef="CMPD_0000000005"/>
           <groups:member groups:idRef="MNXM2"/>
+          <groups:member groups:idRef="CMPD_0000000005"/>
           <groups:member groups:idRef="TARGET_0000000001"/>
         </groups:listOfMembers>
       </groups:group>
@@ -324,9 +324,9 @@
           </rdf:RDF>
         </annotation>
         <groups:listOfMembers>
-          <groups:member groups:idRef="MNXM162231"/>
           <groups:member groups:idRef="MNXM9"/>
           <groups:member groups:idRef="MNXM137"/>
+          <groups:member groups:idRef="MNXM162231"/>
         </groups:listOfMembers>
       </groups:group>
       <groups:group metaid="_58b3b59284e0d918d6d3f3bcadc2d757726da7594cd899cad4e745836ac967a3" groups:id="rp_sink_species" groups:kind="collection">
@@ -338,11 +338,11 @@
           </rdf:RDF>
         </annotation>
         <groups:listOfMembers>
-          <groups:member groups:idRef="MNXM6"/>
+          <groups:member groups:idRef="MNXM9"/>
           <groups:member groups:idRef="MNXM15900"/>
+          <groups:member groups:idRef="MNXM6"/>
           <groups:member groups:idRef="MNXM1"/>
           <groups:member groups:idRef="MNXM2"/>
-          <groups:member groups:idRef="MNXM9"/>
         </groups:listOfMembers>
       </groups:group>
     </groups:listOfGroups>
