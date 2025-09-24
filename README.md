@@ -1,11 +1,11 @@
-# Galaxy‑SynBioCAD • Tutorials (skeleton)
+# Galaxy‑SynBioCAD - Tutorials
 
 ## Getting Started
 
 1. Install locally:
 
    ```bash
-   pip install mkdocs-material
+   pip install mkdocs-material mkdocs-macros-plugin mkdocs-bibtex
    mkdocs serve
    ```
 
@@ -16,14 +16,3 @@
 
 - The workflow `.github/workflows/deploy.yml` builds the site and publishes `./site` to `gh-pages`.
 - In **Settings → Pages**, choose *Deploy from a branch* then `gh-pages` branch (`/` folder).
-
-## Customization
-
-- Edit `mkdocs.yml` (title, navigation, palette).
-- Add a logo in `docs/assets/` and reference it in `mkdocs.yml`:
-
-  ```yaml
-  theme:
-    logo: assets/logo.svg
-    favicon: assets/favicon.ico
-  ```
