@@ -1,5 +1,5 @@
 ---
-hide_answers: true
+hide_answers: false
 description: Find pathways to synthesize heterologous compounds in chassis organisms using retrosynthesis.
 ---
 
