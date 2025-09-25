@@ -833,23 +833,23 @@
 </details>
 <details class="question">
 <summary>Q1: What is the BiGG database?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The BiGG Models database is a repository of genome-scale metabolic network reconstructions that provides standardized, high-quality models for various organisms, facilitating research in systems biology and metabolic engineering.</p>
 </details>
 <details class="question">
 <summary>Q2: Why using a SBML model?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>SBML (Systems Biology Markup Language) is a widely used format for representing computational models in systems biology. It allows for the exchange and sharing of models between different software tools and platforms, making it easier to collaborate and reproduce results.</p>
 </details>
 <details class="question">
 <summary>Q3: How many files are generated? What are they?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>4 files:<br />
+- <code>e_coli_core</code>: the SBML model file (XML/SBML format)<br />
+- <code>e_coli_core (taxon id)</code>: the NCBI taxonomy ID of the organism (TXT/TSV format)<br />
+- <code>e_coli_core (compartments)</code>: the list of compartments in the model (TSV format)<br />
+- <code>e_coli_core (biomass reactions)</code>: the list of biomass reactions in the model (TSV format)</p>
 </details>
 <details class="question">
 <summary>Q4: What is the file format of the model?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The model is in SBML format, which is based on XML.</p>
 </details>
 </div>
 <div class="admonition example">
@@ -913,18 +913,15 @@
 </details>
 <details class="question">
 <summary>Q1: What does this tool do?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>This tool extracts all metabolites present in the SBML model and creates a sink file (CSV format) that can be used as input for RetroPath2.0.</p>
 </details>
 <details class="question">
 <summary>Q2: How many compounds are listed in the file?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>52 compounds.</p>
 </details>
 <details class="question">
 <summary>Q3: What is FVA? How is it used here?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Flux Variability Analysis (FVA) is a computational method used to analyze the range of possible fluxes through metabolic reactions in a given metabolic network. It helps to identify reactions that can carry flux under specific conditions, such as growth on a particular substrate. In this context, FVA is used to remove dead-end metabolites from the sink file, ensuring that only metabolites that can be produced or consumed in the metabolic network are included.</p>
 </details>
 </div>
 <div class="admonition info">
@@ -962,33 +959,27 @@
 </ul>
 <details class="question">
 <summary>Q1: How a reaction rule differs from a regular reaction?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>A regular reaction describes a specific chemical transformation between defined reactants and products, while a reaction rule is a generalized representation that captures the underlying transformation pattern. Reaction rules can be applied to a broader range of substrates, enabling the prediction of reactions for compounds that share similar structural features.</p>
 </details>
 <details class="question">
 <summary>Q2: What is a diameter in this context?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The diameter of a reaction rule defines the size of the molecular environment around the reaction center that is considered when applying the rule. It determines how specific or general the rule is, with larger diameters capturing more of the surrounding structure and thus being more specific.</p>
 </details>
 <details class="question">
 <summary>Q3: What is the impact of choosing low or high diameters?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Choosing low diameters results in more general rules that can be applied to a wider range of substrates, leading to more potential reactions, but may also lead to less accurate predictions. Conversely, higher diameters yield more specific rules that are tailored to particular substrates, potentially improving accuracy but limiting applicability.</p>
 </details>
 <details class="question">
 <summary>Q4: What is the format of the output file?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The output file is in CSV format and contains information about the predicted reactions, including reactants, products, and their associated SMILES and InChI representations.</p>
 </details>
 <details class="question">
 <summary>Q5: Where is located the encoding of the reaction rules?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The encoding of the reaction rules is located in the <strong><code>Rule</code></strong> column.</p>
 </details>
 <details class="question">
 <summary>Q6: How many rules have been downloaded?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>58,596 rows.</p>
 </details>
 </div>
 <div class="admonition example">
@@ -1027,28 +1018,31 @@
 </details>
 <details class="question">
 <summary>Q1: What is Xylitol? What does it look like? Where to find more information?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Xylitol is a natural sugar alcohol used as a sweetener in various food products, and it has applications in dental care due to its ability to reduce tooth decay. More information can be found on its <a href="https://pubchem.ncbi.nlm.nih.gov/compound/Xylitol">PubChem entry</a>.</p>
+<p><figure class="numbered" markdown><br />
+<img alt="Xylitol" src="../assets/xylitol.png" width="200" /><br />
+  <figcaption markdown>Xylitol chemical structure.</figcaption><br />
+</figure></p>
 </details>
 <details class="question">
 <summary>Q2: What is the purpose of the sink file?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The sink file lists metabolites that are available in the chassis organism (E. coli in this case). It is used to determine which predicted compounds are available materials for biosynthesis. Once a predicted compound is found in the sink, retrosynthesis process stops for that branch.</p>
 </details>
 <details class="question">
 <summary>Q3: How many iterations of the retrosynthesis were performed?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>2 iterations maximum.</p>
 </details>
 <details class="question">
 <summary>Q4: What is the format of input and output files?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<ul>
+<li>Reaction rules: CSV file</li>
+<li>Sink: CSV file</li>
+<li>Output: CSV file</li>
+</ul>
 </details>
 <details class="question">
 <summary>Q5: How many reactions are predicted?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>37 rows.</p>
 </details>
 </div>
 <div class="admonition info">
@@ -1075,23 +1069,21 @@
 </ul>
 <details class="question">
 <summary>Q1: How many files are produced? What are they?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>2 files:<br />
+- <strong>Compounds</strong>: CSV file listing all compounds involved in the pathways, with their SMILES representations.<br />
+- <strong>Pathways</strong>: CSV file listing all identified pathways, with pathway IDs, reactions equations, and compounds IDs.</p>
 </details>
 <details class="question">
 <summary>Q2: What is the formalism used for the structure of compounds? How could it be visualized?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The compounds are represented using SMILES (Simplified Molecular Input Line Entry System) notation. SMILES strings can be visualized using various cheminformatics tools and libraries, such as RDKit, or online SMILES viewers, e.g. <a href="https://www.rcsb.org/chemical-sketch">PDB Chemical Sketch Tool</a>.</p>
 </details>
 <details class="question">
 <summary>Q3: How many pathways are found?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Path IDs range from 1 to 12: 12 pathways.</p>
 </details>
 <details class="question">
 <summary>Q4: Why is several rows per pathway?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Each pathway is represented by multiple rows, with each row corresponding to a reaction within the pathway.</p>
 </details>
 </div>
 <div class="admonition example">
@@ -1147,23 +1139,19 @@
 </ul>
 <details class="question">
 <summary>Q1: What is the format of the output?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>A collection of SBML files, with one file per pathway.</p>
 </details>
 <details class="question">
 <summary>Q2: What is the benefit of this format?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>SBML is a standard format for representing computational models in systems biology, allowing for easy sharing and analysis of biological pathways. It is widely supported by various software tools and platforms, facilitating collaboration and reproducibility in research.</p>
 </details>
 <details class="question">
 <summary>Q3: How many pathways have been generated?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>10.</p>
 </details>
 <details class="question">
 <summary>Q4: Do these pathways represent a good solution?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>We don't know if they represent a good solution. We need to evaluate them.</p>
 </details>
 </div>
 <div class="admonition example">
@@ -1195,33 +1183,31 @@
 </div>
 <details class="question">
 <summary>Q1: What is the format of the output?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The output is in HTML format, which can be viewed in a web browser.</p>
 </details>
 <details class="question">
 <summary>Q2: How many pathways are visualized?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>10 pathways.</p>
 </details>
 <details class="question">
 <summary>Q3: What are possible panels of information?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<ul>
+<li>Pathway-related information panel (by click on a pathway ID)</li>
+<li>Reaction-related information panel (by click on a reaction node)</li>
+<li>Compound-related information panel (by click on a compound node)</li>
+</ul>
 </details>
 <details class="question">
 <summary>Q4: Do you see any common reactions between the different pathways?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Yes, some reactions are common between different pathways.</p>
 </details>
 <details class="question">
 <summary>Q5: Some reactions look identical, but have different IDs. Why?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>They are actually different reactions because they involved different set of co-factors.</p>
 </details>
 <details class="question">
 <summary>Q6: Can you identify any key intermediates in the pathways?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>Yes, some intermediates appear in multiple pathways, indicating their importance in the overall metabolic network.</p>
 </details>
 </div>
 <h2 id="conclusion">Conclusion<a class="headerlink" href="#conclusion" title="Permanent link">&para;</a></h2>
