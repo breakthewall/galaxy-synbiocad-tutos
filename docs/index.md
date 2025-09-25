@@ -9,7 +9,6 @@
 - [2 — :material-school: Pathway Design](tuto-2-pathway-analysis.md)
 - [3 — :material-school: Genetic Design](tuto-3-genetic-design.md)
 
-<!--
 ## More resources
 
 - The [Galaxy-SynBioCAD](https://galaxy-synbiocad.org/) instance. Account creation is free and instant.
@@ -18,4 +17,3 @@
       - [:material-video: Pathway Design Video](https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/pathway_analysis/recordings/)
       - [:material-video: Genetic Design Video](https://training.galaxyproject.org/training-material/topics/synthetic-biology/tutorials/basic_assembly_analysis/recordings/)
 - The [BioRetroSynth Github :material-github:](https://github.com/brsynth).
--->
