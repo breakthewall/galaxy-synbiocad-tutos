@@ -83,7 +83,7 @@ The tool provides several scores that can be combined in order to define an over
         - **Comma separated taxon IDs of output enzyme sequences**: use **`553`** which is the taxon ID of _Pantoea ananatis_ strain from which we want to extract enzymes.
         - **Other options**: Leave all other options at their default values.
 
-    !!! question "Q1: How are identified the enzyme in the CSV file?"
+    ??? question "Q1: How are identified the enzyme in the CSV file?"
         {% if not page.meta.hide_answers %}
         Enzyme are identified by their UniProt ID
         {% else %}
@@ -91,7 +91,7 @@ The tool provides several scores that can be combined in order to define an over
         ```
         {% endif %}
 
-    !!! question: "Q2: According to the tabulated file, how many enzymes were found for each reaction?"
+    ??? question "Q2: According to the tabulated file, how many enzymes were found for each reaction?"
         {% if not page.meta.hide_answers %}
         Two for each reaction.
         {% else %}
