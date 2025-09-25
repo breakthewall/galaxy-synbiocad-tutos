@@ -34,9 +34,9 @@ plugins:
       enable_inline_citations: true
   - exclude:
       glob:
-        - "tuto-1-*"
-        - "tuto-2-*"
-        - "tuto-3-*"
+        # - "tuto-1-*"
+        # - "tuto-2-*"
+        # - "tuto-3-*"
 
 markdown_extensions:
   - nl2br
