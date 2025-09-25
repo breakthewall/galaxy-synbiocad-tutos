@@ -1,8 +1,8 @@
 site_name: Galaxy-SynBioCAD • Tutorials
 site_description: Getting started tutorials for Galaxy-SynBioCAD tools
 site_url: https://tduigou.github.io/galaxy-synbiocad-tutos/
-repo_url: https://github.com/tduigou/galaxy-synbiocad-tutos
-edit_uri: edit/main/docs/
+# repo_url: https://github.com/tduigou/galaxy-synbiocad-tutos
+# edit_uri: edit/main/docs/
 
 theme:
   name: material
