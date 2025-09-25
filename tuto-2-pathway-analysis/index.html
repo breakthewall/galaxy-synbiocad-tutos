@@ -887,18 +887,20 @@ https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_007_0001.xm
 </ul>
 <details class="question">
 <summary>Q1: What are the format and the extension of the output files ?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>A collection of SBML files (with <code>.xml</code> extension).</p>
 </details>
 <details class="question">
 <summary>Q2: What is the FBA score for <strong><code>rp_002_0001</code></strong> pathway ? <i class="fa-solid fa-triangle-exclamation icon" aria-hidden="true"></i>difficult</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<ol>
+<li>Click on the output collection to expand it and see the list of SBML files.</li>
+<li>Click <i class="fa-solid fa-eye icon" aria-hidden="true"></i> to open the file <strong><code>rp_002_0001</code></strong>.</li>
+<li>Search (Ctrl+F or Cmd+F) for <strong><code>fba_fraction</code></strong> within a <strong><code>&lt;groups:listOfGroups&gt;</code></strong> section.</li>
+<li>The value is ~ <strong><code>2.48..</code></strong>.</li>
+</ol>
 </details>
 <details class="question">
 <summary>Q3: What does the FBA score represent ?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The FBA score represents the production flux of the target compound (here xylitol) when the biomass flux is constrained to 75% of its maximal theoretical value.</p>
 </details>
 <details class="info">
 <summary>Compartment ID</summary>
@@ -960,13 +962,16 @@ https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_007_0001.xm
 </ol>
 <details class="question">
 <summary>Q1: What is the thermodynamic value for the reaction with <em>EC number</em> 1.1.1.307 for <strong><code>rp_002_0001</code></strong> pathway?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<ol>
+<li>Use the <i class="fa-solid fa-wrench icon" aria-hidden="true"></i><strong>Visualize Pathway</strong> tool to generate a graphical representation of all pathways.</li>
+<li>Click on <strong><code>1.1.1.307</code></strong> reaction belonging to the <strong><code>rp_002_0001</code></strong>.</li>
+<li>On the right panel, look for the ΔrG' (standard Gibbs free energy change) value</li>
+<li>The value is <strong><code>-2.258</code></strong> kJ/mol.</li>
+</ol>
 </details>
 <details class="question">
 <summary>Q2: What a negative ΔrG' indicates?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>A negative value indicates that the reaction is favorable in physiological conditions, hence it will proceed spontaneously in the forward direction.</p>
 </details>
 </div>
 <div class="tabbed-block">
@@ -1018,8 +1023,7 @@ https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_007_0001.xm
 </div>
 <details class="question">
 <summary>Q1: What does the computed score represent?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The computed score represents the probability for the pathway to be a valid pathway.</p>
 </details>
 </div>
 <div class="admonition example">
@@ -1045,23 +1049,24 @@ https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_007_0001.xm
 </div>
 <details class="question">
 <summary>Q1: How many pathways are visualized?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>There are 4 pathways.</p>
 </details>
 <details class="question">
 <summary>Q2: What is the global score of the pathway <code>rp_002_0001</code>?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<ol>
+<li>Click on the pathway <code>rp_002_0001</code> to open it.</li>
+<li>On the left panel, look for the "Info" icon and click on it.</li>
+<li>On the right panel, look for the <code>Global score</code> section.</li>
+<li>The value is <strong><code>0.974</code></strong>.</li>
+</ol>
 </details>
 <details class="question">
 <summary>Q3: What is the best pathway?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The best pathway is <code>rp_002_0001</code> with a global score of <strong><code>0.974</code></strong>.</p>
 </details>
 <details class="question">
 <summary>Q4: What is the FBA score of the best pathway?</summary>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
+<p>The FBA score of the best pathway <code>rp_002_0001</code> is <strong><code>2.484</code></strong>.</p>
 </details>
 </div>
 <!-- ### Rank annotated pathways
