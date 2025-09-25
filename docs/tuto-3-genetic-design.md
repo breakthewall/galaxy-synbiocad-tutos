@@ -1,5 +1,5 @@
 ---
-hide_answers: true
+hide_answers: false
 description: "Tutorial on Genetic Design using Galaxy-SynBioCAD tools"
 ---
 

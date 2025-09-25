@@ -1,5 +1,5 @@
 ---
-hide_answers: true
+hide_answers: false
 description: Tutorial to analyze and rank heterologous pathways for producing a target compound in a chassis organism.
 ---
 
