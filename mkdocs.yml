@@ -32,6 +32,11 @@ plugins:
       # csl_file: docs/ieee.csl
       # csl_file: docs/din-1505-2-alphanumeric.csl
       enable_inline_citations: true
+  - exclude:
+      glob:
+        - "tuto-1-*"
+        - "tuto-2-*"
+        - "tuto-3-*"
 
 markdown_extensions:
   - nl2br
