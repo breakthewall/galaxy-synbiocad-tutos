@@ -1,3 +1,8 @@
+---
+hide_answers: true
+description: Tutorial to analyze and rank heterologous pathways for producing a target compound in a chassis organism.
+---
+
 # Tutorial — Pathway Design
 
 Progress in synthetic biology is enabled by powerful bioinformatics tools such as those aimed to design metabolic pathways for the production of chemicals. These tools are available in SynBioCAD portal which is the first Galaxy set of tools for synthetic biology and metabolic engineering[@herisson2022].
@@ -141,16 +146,31 @@ We first perform an FBA (with COBRApy) optimizing the biomass reaction and recor
     - **Advanced options {{ icon("gx-eye") }}**: leave default values
 
     ??? question "Q1: What are the format and the extension of the output files ?"
-        1. The output is an SBML file with `.xml` extension.
+        {% if not page.meta.hide_answers %}
+        A collection of SBML files (with `.xml` extension).
+        {% else %}
+        ```text
+        ```
+        {% endif %}
    
     ??? question "Q2: What is the FBA score for **`rp_002_0001`** pathway ? {{ icon("warning") }}difficult"
-        2. Click on the output collection to expand it and see the list of SBML files.
-        3. Click {{ icon("gx-eye") }} to open the file **`rp_002_0001`**.
-        4. Search (Ctrl+F or Cmd+F) for **`fba_fraction`** within a **`<groups:listOfGroups>`** section.
-        5. The value is ~ **`2.48..`**.
+        {% if not page.meta.hide_answers %}
+        1. Click on the output collection to expand it and see the list of SBML files.
+        2. Click {{ icon("gx-eye") }} to open the file **`rp_002_0001`**.
+        3. Search (Ctrl+F or Cmd+F) for **`fba_fraction`** within a **`<groups:listOfGroups>`** section.
+        4. The value is ~ **`2.48..`**.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
     ??? question "Q3: What does the FBA score represent ?"
+        {% if not page.meta.hide_answers %}
         The FBA score represents the production flux of the target compound (here xylitol) when the biomass flux is constrained to 75% of its maximal theoretical value.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
     ??? info "Compartment ID"
         You can specify the compartment from which the chemical species were extracted. The default is **`c`**, the BiGG code for the cytoplasm.
@@ -202,13 +222,23 @@ The _Thermo_ Galaxy tool is used to estimate thermodynamics values (based on Gib
         <span style="color:#f59e0b">:material-alert:</span> **Do not** include other files. <span style="color:#f59e0b">:material-alert:</span>
 
         ??? question "Q1: What is the thermodynamic value for the reaction with _EC number_ 1.1.1.307 for **`rp_002_0001`** pathway?"
+            {% if not page.meta.hide_answers %}
             1. Use the {{ icon("gx-tool") }}**Visualize Pathway** tool to generate a graphical representation of all pathways.
             2. Click on **`1.1.1.307`** reaction belonging to the **`rp_002_0001`**.
             3. On the right panel, look for the ΔrG' (standard Gibbs free energy change) value
             4. The value is **`-2.258`** kJ/mol.
+            {% else %}
+            ```text
+            ```
+            {% endif %}
 
         ??? question "Q2: What a negative ΔrG' indicates?"
+            {% if not page.meta.hide_answers %}
             A negative value indicates that the reaction is favorable in physiological conditions, hence it will proceed spontaneously in the forward direction.
+            {% else %}
+            ```text
+            ```
+            {% endif %}
 
     === "{{ icon("warning") }} Option 2: Run Thermo tool — time-consuming"
 
@@ -247,7 +277,12 @@ The _Pathway Score_ tool provides a global score for a given pathway previously 
         The tool outputs new annotated SBML files representing the pathways, containing the `global_score` annotation, as well as other annotations such as the FBA score and the pathway Gibbs energy.
 
     ??? question "Q1: What does the computed score represent?"
+        {% if not page.meta.hide_answers %}
         The computed score represents the probability for the pathway to be a valid pathway.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
 !!! example "Hands-on: Rename the output collection"
     It not set yet, rename the output collection to **`Scored - Thermo - FBA - Annotated Pathways`**.
@@ -267,19 +302,39 @@ The _Pathway Score_ tool provides a global score for a given pathway previously 
         - Alternatively (2): click on the {{ icon("gx-download") }} icon and select **Download** to download the file and open it locally with a web browser. 
 
     ??? question "Q1: How many pathways are visualized?"
+        {% if not page.meta.hide_answers %}
         There are 4 pathways.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
     
     ??? question "Q2: What is the global score of the pathway `rp_002_0001`?"
+        {% if not page.meta.hide_answers %}
         1. Click on the pathway `rp_002_0001` to open it.
         2. On the left panel, look for the "Info" icon and click on it.
         3. On the right panel, look for the `Global score` section.
         4. The value is **`0.974`**.
-   
+        {% else %}
+        ```text
+        ```
+        {% endif %}
+
     ??? question "Q3: What is the best pathway?"
+        {% if not page.meta.hide_answers %}
         The best pathway is `rp_002_0001` with a global score of **`0.974`**.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
     ??? question "Q4: What is the FBA score of the best pathway?"
+        {% if not page.meta.hide_answers %}
         The FBA score of the best pathway `rp_002_0001` is **`2.484`**.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
 <!-- ### Rank annotated pathways
 

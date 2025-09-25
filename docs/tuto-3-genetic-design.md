@@ -1,3 +1,8 @@
+---
+hide_answers: true
+description: "Tutorial on Genetic Design using Galaxy-SynBioCAD tools"
+---
+
 # Tutorial — Genetic Design
 
 Synthetic biology is a novel engineering discipline which requires computational tools for the design of metabolic pathways for the production of chemicals such as SynBioCAD portal which is the first Galaxy set of tools for synthetic biology and metabolic engineering[@herisson2022].
@@ -79,10 +84,20 @@ The tool provides several scores that can be combined in order to define an over
         - **Other options**: Leave all other options at their default values.
 
     !!! question "Q1: How are identified the enzyme in the CSV file?"
+        {% if not page.meta.hide_answers %}
         Enzyme are identified by their UniProt ID
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
     !!! question: "Q2: According to the tabulated file, how many enzymes were found for each reaction?"
+        {% if not page.meta.hide_answers %}
         Two for each reaction.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
 !!! example "Hands-on: Rename outputs"
     Rename the outputs of **Selenzyme** {{ icon("gx-tool") }} to more meaningful names:
@@ -130,15 +145,25 @@ For **linkers**, the type annotation should be one of _neutral linker_, _methyla
         - A collection of SBOL files (one per construct) that can be visualized using online tools such as [VisBOL](https://visbol.org/).
     
     ??? question "Q1: How many constructs were generated?"
+        {% if not page.meta.hide_answers %}
         88 construct designs were generated in CSV and SBOL format.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
     ??? question "Q2: Visualize one SBOL construct using VisBOL. What do you observe?"
+        {% if not page.meta.hide_answers %}
         The construct is composed of the backbone, a promoter, a series of enzyme-encoding genes separated by linkers, and flanked by the LMP and LMS linkers.
 
         <figure class="numbered" markdown>
           ![VisBOL](assets/genetic_design_visbol.png){ width="600" }
           <figcaption markdown>BASIC construct rendered with VisBOL</figcaption>
         </figure>
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
 !!! example "Hands-on: Rename outputs"
     Rename the outputs of **BasicDesign** {{ icon("gx-tool") }}:
@@ -178,11 +203,24 @@ DNA-Bot tool[@storch2020] reads the list of constructs (previously produced by B
         </figure>
 
     ??? question "Q1: Looking at the scripts names, can you figure out the 4 main steps of DNA-Bot?"
+        {% if not page.meta.hide_answers %}
         Main steps:
         1. **Clip reactions**: Prepare the mixes for the ligation of the individual DNA parts with the linkers.
         2. **Purification**: Purify the linker-ligated DNA parts using magnetic beads and the Opentrons magnetic module.
         3. **Assembly**: Mix the DNA purified parts to build the final constructs.
         4. **Transformation**: Transform the chassis micro-organism with the plasmid and inoculate onto agar.
+        {% else %}
+        ```text
+        ```
+        {% endif %}
+
+    ??? question "Q2: What is the format of the scripts?"
+        {% if not page.meta.hide_answers %}
+        The scripts are in Python format (.py).
+        {% else %}
+        ```text
+        ```
+        {% endif %}
 
 ## Conclusion
 
