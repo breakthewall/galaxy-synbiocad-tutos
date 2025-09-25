@@ -65,10 +65,10 @@ The input data required are:
         1. Import pathways files from the online resources:
 
             ```
-            https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_002_0001.xml
-            https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_004_0001.xml
-            https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_005_0001.xml
-            https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/rp_007_0001.xml
+            https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_002_0001.xml
+            https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_004_0001.xml
+            https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_005_0001.xml
+            https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/rp_007_0001.xml
             ```
 
             ??? tip "How-to: Importing via links"
@@ -89,7 +89,7 @@ The input data required are:
         2. Import model file:
 
             ```
-            https://raw.githubusercontent.com/tduigou/galaxy-synbiocad-tutos/refs/heads/main/data/pa-inputs/e_coli_core.xml
+            https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-inputs/e_coli_core.xml
             ```
         
         3. Rename the _E. coli_ model to **`Model - SBML`**.
@@ -206,7 +206,7 @@ The _Thermo_ Galaxy tool is used to estimate thermodynamics values (based on Gib
 
     === "{{ icon("thumbs-up") }} Option 1: Download pre-computed results"
 
-        1. Download the pre-computed results on your computer: [Thermo - FBA - Annotated pathways.zip](https://github.com/tduigou/galaxy-synbiocad-tutos/raw/refs/heads/main/data/pa-thermo/Thermo - FBA - Annotated pathways.zip)
+        1. Download the pre-computed results on your computer: [Thermo - FBA - Annotated pathways.zip](https://tduigou.github.io/galaxy-synbiocad-tutos/assets/pa-thermo/Thermo%20-%20FBA%20-%20Annotated%20pathways.zip)
 
         2. Unzip the file (locally on your computer).
 
